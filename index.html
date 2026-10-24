@@ -32,17 +32,34 @@ font-weight:800;text-decoration:none;padding:12px;border-radius:10px}
 .terminada{opacity:.75}.terminada .precio{color:var(--gris)}.terminada .boton{background:#dfe2ea}
 .vacio{background:var(--blanco);border-radius:16px;padding:20px;color:var(--gris)}
 footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);font-size:.82rem}
+.redes{display:flex;gap:8px;flex-wrap:wrap;max-width:1100px;margin:12px auto 0}
+.red{display:inline-flex;align-items:center;gap:6px;color:var(--azul);background:var(--amarillo);
+text-decoration:none;font-weight:700;font-size:.9rem;padding:7px 12px;border-radius:999px}
+footer .redes{margin:0 0 12px}footer .red{background:var(--azul);color:var(--blanco)}
+.compartir{display:flex;align-items:center;justify-content:center;gap:6px;color:#128c4a;text-decoration:none;
+font-weight:700;font-size:.88rem;padding:6px}
+.compacta{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.mini-foto{background:var(--blanco);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;
+border-bottom:1px solid #eef0f4}
+.mini-foto img{max-width:85%;max-height:85%;object-fit:contain}
+.mini .cuerpo{padding:10px 10px 12px;gap:4px}
+.mini h3{font-size:.86rem;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+overflow:hidden}
+.mini .nota{font-size:.74rem}
+.mini .boton{padding:9px 6px;font-size:.85rem}
+.precio.chico{font-size:1.15rem}
 </style>
 </head>
 <body>
   <header>
     <div class="marca"><img src="logo.png" alt=""><b>El <span>Datazo</span></b></div>
     <p>Ofertas de Mercado Libre, con el dato claro. Las revisamos todos los días: si una termina, te lo decimos.</p>
+    <nav class="redes" aria-label="Redes de El Datazo"><a class="red" href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg> Instagram</a><a class="red" href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z" fill="currentColor"/></svg> Facebook</a><a class="red" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Telegram</a></nav>
   </header>
   <main>
     <h2>Ofertas de hoy</h2>
     <div class="grilla">
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA16048275">
       <img src="img/MLA16048275.jpg" alt="Eucerin Sun Oil Control Protector solar facial Toque Seco FPS 50 x 50 ml" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Eucerin Sun Oil Control Protector solar facial Toque Seco FPS 50 x 50 ml</h3>
@@ -50,10 +67,11 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2Zpeewk" rel="sponsored noopener" target="_blank"
            data-oferta="MLA16048275">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Eucerin%20Sun%20Oil%20Control%20Protector%20solar%20facial%20Toque%20Seco%20FPS%2050%20x%2050%20ml%20a%20%2445.181%20https%3A//eldatazo.com.ar/%23MLA16048275" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA19576694">
       <img src="img/MLA19576694.jpg" alt="Bomba Periferica Elevadora Agua Vasser 1/2 Hp 20mts caudal 30 l/m" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Bomba Periferica Elevadora Agua Vasser 1/2 Hp 20mts caudal 30 l/m</h3>
@@ -61,10 +79,11 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2nztThe" rel="sponsored noopener" target="_blank"
            data-oferta="MLA19576694">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Bomba%20Periferica%20Elevadora%20Agua%20Vasser%201/2%20Hp%2020mts%20caudal%2030%20l/m%20a%20%2444.245%20https%3A//eldatazo.com.ar/%23MLA19576694" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA19686540">
       <img src="img/MLA19686540.jpg" alt="Bomba Agua Presurizadora PRE1 Vasser Motorarg 120W 220 V" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Bomba Agua Presurizadora PRE1 Vasser Motorarg 120W 220 V</h3>
@@ -72,10 +91,35 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2Qmp3jW" rel="sponsored noopener" target="_blank"
            data-oferta="MLA19686540">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Bomba%20Agua%20Presurizadora%20PRE1%20Vasser%20Motorarg%20120W%20220%20V%20a%20%2453.432%20https%3A//eldatazo.com.ar/%23MLA19686540" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA23027132">
+      <img src="img/MLA23027132.jpg" alt="Calculadora Cientifica Casio Fx-991lacw Classwiz" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Calculadora Cientifica Casio Fx-991lacw Classwiz</h3>
+        <p class="precios"><span class="precio">$73.967</span><span class="antes">$92.459</span><span class="off">20% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2smJXfh" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA23027132">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Calculadora%20Cientifica%20Casio%20Fx-991lacw%20Classwiz%20a%20%2473.967%20https%3A//eldatazo.com.ar/%23MLA23027132" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="MLA23521180">
+      <img src="img/MLA23521180.jpg" alt="Pintura Latex Ingenia X 20 L Interior Exterior Cubritiva - Blanco" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Pintura Latex Ingenia X 20 L Interior Exterior Cubritiva - Blanco</h3>
+        <p class="precios"><span class="precio">$32.999</span><span class="antes">$69.999</span><span class="off">53% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2Gbd1ds" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA23521180">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Pintura%20Latex%20Ingenia%20X%2020%20L%20Interior%20Exterior%20Cubritiva%20-%20Blanco%20a%20%2432.999%20https%3A//eldatazo.com.ar/%23MLA23521180" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="MLA24127896">
       <img src="img/MLA24127896.jpg" alt="Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar</h3>
@@ -83,10 +127,23 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2DfwhAa" rel="sponsored noopener" target="_blank"
            data-oferta="MLA24127896">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Masajeador%20Cervical%20El%C3%A9ctrico%20Portatil%20Inalambrico%20Bater%C3%ADa%20Recargable%20Usb%20Femmto%20Relajaci%C3%B3n%20Cuello%20Espalda%20Lumbar%20a%20%2470.699%20https%3A//eldatazo.com.ar/%23MLA24127896" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA24496709">
+      <img src="img/MLA24496709.jpg" alt="Colchon Antiescaras Inflable Ortopedico Con Bomba Femmto" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Colchon Antiescaras Inflable Ortopedico Con Bomba Femmto</h3>
+        <p class="precios"><span class="precio">$65.959</span><span class="antes">$119.999</span><span class="off">45% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/1yfHiNk" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA24496709">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Colchon%20Antiescaras%20Inflable%20Ortopedico%20Con%20Bomba%20Femmto%20a%20%2465.959%20https%3A//eldatazo.com.ar/%23MLA24496709" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="MLA25363194">
       <img src="img/MLA25363194.jpg" alt="Old Prince Premium gato adulto 7.5 kg" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Old Prince Premium gato adulto 7.5 kg</h3>
@@ -94,10 +151,35 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2zmmmFA" rel="sponsored noopener" target="_blank"
            data-oferta="MLA25363194">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Old%20Prince%20Premium%20gato%20adulto%207.5%20kg%20a%20%2440.100%20https%3A//eldatazo.com.ar/%23MLA25363194" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA26204453">
+      <img src="img/MLA26204453.jpg" alt="Bomba Desagote Agua Sucia Vasser De 400ps 400 Watts" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Bomba Desagote Agua Sucia Vasser De 400ps 400 Watts</h3>
+        <p class="precios"><span class="precio">$69.138</span><span class="antes">$85.440</span><span class="off">19% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/19GEcXU" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA26204453">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Bomba%20Desagote%20Agua%20Sucia%20Vasser%20De%20400ps%20400%20Watts%20a%20%2469.138%20https%3A//eldatazo.com.ar/%23MLA26204453" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="MLA28052339">
+      <img src="img/MLA28052339.jpg" alt="Pañales Pampers deluxe protection XXG x 54 unidades" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Pañales Pampers deluxe protection XXG x 54 unidades</h3>
+        <p class="precios"><span class="precio">$43.430</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2kAwAe6" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA28052339">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Pa%C3%B1ales%20Pampers%20deluxe%20protection%20XXG%20x%2054%20unidades%20a%20%2443.430%20https%3A//eldatazo.com.ar/%23MLA28052339" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
+      </div>
+    </article>
+
+    <article class="tarjeta" id="MLA37255352">
       <img src="img/MLA37255352.jpg" alt="Afeitadora Eléctrica Hombre Shaver VGR V-325 Recargable Inalámbrica Negro y azul" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Afeitadora Eléctrica Hombre Shaver VGR V-325 Recargable Inalámbrica Negro y azul</h3>
@@ -105,21 +187,23 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/1KpJLVC" rel="sponsored noopener" target="_blank"
            data-oferta="MLA37255352">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Afeitadora%20El%C3%A9ctrica%20Hombre%20Shaver%20VGR%20V-325%20Recargable%20Inal%C3%A1mbrica%20Negro%20y%20azul%20a%20%2442.790%20https%3A//eldatazo.com.ar/%23MLA37255352" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
-      <img src="img/MLA42113284.jpg" alt="Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco" loading="lazy" width="1080" height="1080">
+    <article class="tarjeta" id="MLA68388327">
+      <img src="img/MLA68388327.jpg" alt="Matafuegos Abc 5 Kg Para Comercios" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
-        <h3>Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco</h3>
-        <p class="precios"><span class="precio">$73.990</span><span class="antes">$95.000</span><span class="off">22% OFF</span></p>
-        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
-        <a class="boton" href="https://meli.la/2UQdfmA" rel="sponsored noopener" target="_blank"
-           data-oferta="MLA42113284">Ver oferta en Mercado Libre</a>
+        <h3>Matafuegos Abc 5 Kg Para Comercios</h3>
+        <p class="precios"><span class="precio">$78.750</span><span class="antes">$105.000</span><span class="off">25% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2gsNYCX" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA68388327">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Matafuegos%20Abc%205%20Kg%20Para%20Comercios%20a%20%2478.750%20https%3A//eldatazo.com.ar/%23MLA68388327" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA69121337">
       <img src="img/MLA69121337.jpg" alt="Figuritas Panini X 25 Sobres World Cup 2026 Mundial 2026" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Figuritas Panini X 25 Sobres World Cup 2026 Mundial 2026</h3>
@@ -127,10 +211,11 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/1qNpAcw" rel="sponsored noopener" target="_blank"
            data-oferta="MLA69121337">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Figuritas%20Panini%20X%2025%20Sobres%20World%20Cup%202026%20Mundial%202026%20a%20%2450.000%20https%3A//eldatazo.com.ar/%23MLA69121337" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA76118504">
       <img src="img/MLA76118504.jpg" alt="Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S</h3>
@@ -138,10 +223,11 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/2V53bXq" rel="sponsored noopener" target="_blank"
            data-oferta="MLA76118504">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Tensiometro%20Digital%20Brazo%20Bluetooth%20Presion%20Arterial%20Aparato%20Para%20Tomar%20Presion%20Bater%C3%ADa%20Recargable%20Usb%20Medidor%20Automatico%20Femmto%20KF-DT65S%20a%20%2432.999%20https%3A//eldatazo.com.ar/%23MLA76118504" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
 
-    <article class="tarjeta">
+    <article class="tarjeta" id="MLA7890744">
       <img src="img/MLA7890744.jpg" alt="Secador De Pelo Ultracomb Tourmaline Ion Pro Sc-4606 Negro 3 Temperaturas cool shot 1 Boquilla Negro / Rojo" loading="lazy" width="1080" height="1080">
       <div class="cuerpo">
         <h3>Secador De Pelo Ultracomb Tourmaline Ion Pro Sc-4606 Negro 3 Temperaturas cool shot 1 Boquilla Negro / Rojo</h3>
@@ -149,15 +235,31 @@ footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);f
         <p class="nota">Precio publicado en Mercado Libre el 24/10. Puede cambiar.</p>
         <a class="boton" href="https://meli.la/1dCh9vj" rel="sponsored noopener" target="_blank"
            data-oferta="MLA7890744">Ver oferta en Mercado Libre</a>
+        <a class="compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Secador%20De%20Pelo%20Ultracomb%20Tourmaline%20Ion%20Pro%20Sc-4606%20Negro%203%20Temperaturas%20cool%20shot%201%20Boquilla%20Negro%20/%20Rojo%20a%20%2443.999%20https%3A//eldatazo.com.ar/%23MLA7890744" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg> Compartir por WhatsApp</a>
       </div>
     </article>
     </div>
     
+    <h2>Terminadas</h2>
+<div class="grilla">
+    <article class="tarjeta terminada" id="MLA42113284">
+      <img src="img/MLA42113284_terminada.jpg" alt="Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco</h3>
+        <p class="precios"><span class="precio">$73.990</span><span class="antes">$95.000</span><span class="off">22% OFF</span></p>
+        <p class="nota">Oferta terminada. El link sigue abierto: mirá el precio de hoy.</p>
+        <a class="boton" href="https://meli.la/2UQdfmA" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA42113284">Ver precio de hoy</a>
+        
+      </div>
+    </article>
+</div>
   </main>
   <footer>
+    <nav class="redes" aria-label="Redes de El Datazo"><a class="red" href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg> Instagram</a><a class="red" href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z" fill="currentColor"/></svg> Facebook</a><a class="red" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Telegram</a></nav>
     Los links son de afiliado de Mercado Libre: si comprás, El Datazo puede recibir una comisión, sin que cambie
     tu precio. Los precios son los publicados en Mercado Libre el día indicado y pueden cambiar.
-    Actualizado el 24/10/2026 19:03.
+    Actualizado el 24/10/2026 19:21.
   </footer>
 </body>
 </html>
