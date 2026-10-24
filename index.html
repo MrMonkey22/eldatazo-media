@@ -7,17 +7,113 @@
   <meta name="description" content="Ofertas de Mercado Libre elegidas y revisadas todos los días por El Datazo.">
   <link rel="icon" href="logo.png">
   <style>
-    body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#16233f;
-    color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;text-align:center;padding:16px}
-    img{width:72px;height:72px}h1{margin:12px 0 4px;font-size:2rem}h1 span{color:#ffd21f}
-    p{color:#c9d0e0;max-width:420px;margin:8px auto}
-  </style>
+:root{--azul:#16233f;--amarillo:#ffd21f;--verde:#00a650;--gris:#6b7385;--fondo:#f4f5f8;--blanco:#fff}
+*{box-sizing:border-box}body{margin:0;background:var(--fondo);color:#1b2233;
+font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.4}
+header{background:var(--azul);color:var(--blanco);padding:20px 16px 18px}
+.marca{display:flex;align-items:center;gap:10px;max-width:1100px;margin:0 auto}
+.marca img{width:42px;height:42px}.marca b{font-size:1.6rem}.marca b span{color:var(--amarillo)}
+header p{max-width:1100px;margin:8px auto 0;color:#c9d0e0;font-size:.95rem}
+main{max-width:1100px;margin:0 auto;padding:16px}
+h2{font-size:1.2rem;margin:20px 0 12px}
+.grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.tarjeta{background:var(--blanco);border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);
+display:flex;flex-direction:column}
+.tarjeta img{width:100%;height:auto;display:block;aspect-ratio:1/1;object-fit:cover}
+.cuerpo{padding:12px 14px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+h3{font-size:1rem;margin:0}
+.precios{margin:0;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.precio{font-size:1.4rem;font-weight:800;color:var(--azul)}
+.antes{color:var(--gris);text-decoration:line-through}
+.off{background:var(--verde);color:var(--blanco);font-weight:700;font-size:.8rem;padding:2px 6px;border-radius:6px}
+.nota{margin:0;color:var(--gris);font-size:.82rem}
+.boton{margin-top:auto;display:block;text-align:center;background:var(--amarillo);color:var(--azul);
+font-weight:800;text-decoration:none;padding:12px;border-radius:10px}
+.terminada{opacity:.75}.terminada .precio{color:var(--gris)}.terminada .boton{background:#dfe2ea}
+.vacio{background:var(--blanco);border-radius:16px;padding:20px;color:var(--gris)}
+footer{max-width:1100px;margin:24px auto;padding:0 16px 32px;color:var(--gris);font-size:.82rem}
+</style>
 </head>
 <body>
+  <header>
+    <div class="marca"><img src="logo.png" alt=""><b>El <span>Datazo</span></b></div>
+    <p>Ofertas de Mercado Libre, con el dato claro. Las revisamos todos los días: si una termina, te lo decimos.</p>
+  </header>
   <main>
-    <img src="logo.png" alt="">
-    <h1>El <span>Datazo</span></h1>
-    <p>Muy pronto: las ofertas de Mercado Libre que revisamos todos los días, con el dato claro.</p>
+    <h2>Ofertas de hoy</h2>
+    <div class="grilla">
+    <article class="tarjeta">
+      <img src="img/MLA16048275.jpg" alt="Eucerin Sun Oil Control Protector solar facial Toque Seco FPS 50 x 50 ml" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Eucerin Sun Oil Control Protector solar facial Toque Seco FPS 50 x 50 ml</h3>
+        <p class="precios"><span class="precio">$45.181</span><span class="antes">$75.301</span><span class="off">40% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2Zpeewk" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA16048275">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <img src="img/MLA24127896.jpg" alt="Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Masajeador Cervical Eléctrico Portatil Inalambrico Batería Recargable Usb Femmto Relajación Cuello Espalda Lumbar</h3>
+        <p class="precios"><span class="precio">$70.699</span><span class="antes">$100.000</span><span class="off">29% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2DfwhAa" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA24127896">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <img src="img/MLA25363194.jpg" alt="Old Prince Premium gato adulto 7.5 kg" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Old Prince Premium gato adulto 7.5 kg</h3>
+        <p class="precios"><span class="precio">$40.100</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2zmmmFA" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA25363194">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <img src="img/MLA37255352.jpg" alt="Afeitadora Eléctrica Hombre Shaver VGR V-325 Recargable Inalámbrica Negro y azul" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Afeitadora Eléctrica Hombre Shaver VGR V-325 Recargable Inalámbrica Negro y azul</h3>
+        <p class="precios"><span class="precio">$42.790</span><span class="antes">$79.580</span><span class="off">46% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/1KpJLVC" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA37255352">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <img src="img/MLA42113284.jpg" alt="Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Mesa Exterior Plegable 180 Cm Polipropileno Hierro - Alpina Color Blanco</h3>
+        <p class="precios"><span class="precio">$73.990</span><span class="antes">$95.000</span><span class="off">22% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2UQdfmA" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA42113284">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+
+    <article class="tarjeta">
+      <img src="img/MLA76118504.jpg" alt="Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S" loading="lazy" width="1080" height="1080">
+      <div class="cuerpo">
+        <h3>Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S</h3>
+        <p class="precios"><span class="precio">$32.999</span><span class="antes">$50.000</span><span class="off">34% OFF</span></p>
+        <p class="nota">Precio publicado en Mercado Libre el 22/10. Puede cambiar.</p>
+        <a class="boton" href="https://meli.la/2V53bXq" rel="sponsored noopener" target="_blank"
+           data-oferta="MLA76118504">Ver oferta en Mercado Libre</a>
+      </div>
+    </article>
+    </div>
+    
   </main>
+  <footer>
+    Los links son de afiliado de Mercado Libre: si comprás, El Datazo puede recibir una comisión, sin que cambie
+    tu precio. Los precios son los publicados en Mercado Libre el día indicado y pueden cambiar.
+    Actualizado el 24/10/2026 00:31.
+  </footer>
 </body>
 </html>
