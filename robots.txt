@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /lunes/
+
+Sitemap: https://eldatazo.com.ar/sitemap.xml
