@@ -302,6 +302,27 @@ border-radius:24px;padding:26px 28px}
 .pronto-caja{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:28px;max-width:46em}
 .pronto-caja ul{margin:12px 0 0;padding-left:20px;color:#3a4456}
 .pronto-caja h2:first-child{margin-top:0}
+.rubros-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:thin}
+.rubros-nav a{flex:none;font:600 .92rem system-ui,sans-serif;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);
+border-radius:999px;padding:8px 14px;text-decoration:none}
+.rubros-nav a[aria-current="page"]{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}
+.rubros-nav a.pronto{color:var(--gris)}
+.migas{font-size:.9rem;color:#c9d0dc;margin:0 0 8px}.migas a{color:#dfe4ec}
+.rubros-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin:0;padding:0;list-style:none}
+.rubro{display:flex;flex-direction:column;gap:8px;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);
+padding:22px;color:inherit;text-decoration:none}
+a.rubro:hover{border-color:var(--tinta)}
+.rubro h2{font-size:1.2rem}.rubro p{margin:0;color:#3a4456}
+.rubro .cuenta{margin-top:auto;font:700 .9rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.rubro.pronto{background:transparent;border-style:dashed}.rubro.pronto .cuenta{color:var(--gris)}
+.consejos{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:20px 22px;margin:0 0 22px}
+.consejos h2{font-size:1.1rem;margin:0 0 8px}.consejos ul{margin:0;padding-left:20px;color:#3a4456}
+.consejos li+li{margin-top:6px}
+.marcas-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:0;padding:0;list-style:none}
+.marca-viaje{display:flex;flex-direction:column;gap:10px;background:var(--blanco);border:1px solid var(--linea);
+border-radius:var(--radio);padding:22px}
+.marca-viaje h3{font-size:1.2rem}.marca-viaje p{margin:0;color:#3a4456}
+.marca-viaje .boton{align-self:flex-start;margin-top:auto}
 
 /* resultados */
 .resultados{padding:32px 0 4px}
@@ -391,20 +412,28 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
   </header>
   <main id="contenido">
     <section class="cabeza-tienda">
-      <div class="envoltura"><h1>Viajes</h1><p>Próximamente.</p></div>
+      <div class="envoltura"><h1>Viajes</h1>
+        <p>Lo que conviene resolver antes de viajar, ordenado por rubro.</p></div>
     </section>
     <section class="seccion envoltura">
-      <div class="pronto-caja texto-largo">
-        <h2>Estamos armando la sección de viajes</h2>
-        <p>Vamos a buscar hoteles, escapadas y vuelos con el mismo criterio que usamos para los productos: buenas
-        opiniones de quienes ya viajaron y un precio que vimos nosotros, con la fecha.</p>
-        <ul>
-          <li>Hoteles y alojamientos con buena calificación.</li>
-          <li>Escapadas cerca, con el precio por noche.</li>
-          <li>Vuelos, cuando haya una baja real.</li>
-        </ul>
-        <p style="margin-top:16px">Cuando esté lista, la anunciamos en el canal.</p><p><a class="boton oscuro" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> Avisame en el canal</a></p>
-      </div>
+      <nav class="rubros-nav" aria-label="Rubros de viajes"><a href="/viajes/" aria-current="page">Todo</a><a href="/viajes/esim/" class="pronto">eSIM</a><a href="/viajes/traslados/" class="pronto">Traslados</a><a href="/viajes/autos/" class="pronto">Autos</a><a href="/viajes/entradas/" class="pronto">Entradas</a><a href="/viajes/reclamos/" class="pronto">Reclamos</a><a href="/viajes/hoteles/" class="pronto">Hoteles</a><a href="/viajes/excursiones/" class="pronto">Excursiones</a></nav>
+      <ul class="rubros-lista" role="list" style="margin-top:14px">
+        <li><a class="rubro pronto" href="/viajes/esim/"><h2>Internet en tu viaje</h2><p>Datos en el celular desde que aterrizás, sin cambiar tu chip.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/traslados/"><h2>Del aeropuerto al hotel</h2><p>Un chofer que te espera al llegar, reservado de antemano.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/autos/"><h2>Alquiler de auto</h2><p>Comparadores con varias empresas de alquiler en una sola búsqueda.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/entradas/"><h2>Entradas y paseos</h2><p>Museos y atracciones con la entrada en el celular.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/reclamos/"><h2>Vuelo demorado o cancelado</h2><p>Si tu vuelo se demoró o se canceló, quizás te deben plata.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/hoteles/"><h2>Hoteles</h2><p>Alojamientos con buenas opiniones.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+        <li><a class="rubro pronto" href="/viajes/excursiones/"><h2>Excursiones</h2><p>Paseos y visitas guiadas en destino.</p>
+          <span class="cuenta">Próximamente</span></a></li>
+      </ul>
+      <p class="nota" style="margin-top:18px">Los links son de afiliado: si reservás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los precios y las condiciones los pone cada empresa en su sitio. Revisamos los links todos los días. Hoteles y excursiones están en camino. <a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Seguinos en el canal</a> para enterarte cuando se sumen.</p>
     </section>
   </main>
   <footer>
@@ -413,7 +442,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 07/11/2026 a las 10:30 (hora argentina).</p>
+        <p>Actualizado el 07/11/2026 a las 10:51 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
