@@ -305,6 +305,49 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}@view-transition{navigation:none}
 *{transition:none!important;animation:none!important}}
+
+.migas{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none;font-size:.88rem;color:#c9d0dc}
+.migas a{color:var(--blanco)}
+.migas li+li::before{content:"/";margin-right:6px;color:#8a95a8}
+.ficha{display:grid;gap:28px;padding:32px 0 8px}
+@media (min-width:860px){.ficha{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.ficha-foto{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;aspect-ratio:1/1;padding:28px;
+display:flex;align-items:center;justify-content:center}
+.ficha-foto img{width:100%;height:100%;object-fit:contain}
+.ficha-foto.terminada img{filter:grayscale(1);opacity:.6}
+.ficha h1{font-size:clamp(1.4rem,3vw,2rem);margin:8px 0 16px}
+.ficha .gondola .precio{font-size:2.2rem}
+.ficha .acciones{margin-top:18px;max-width:560px;flex-wrap:wrap}
+.ficha .acciones .boton.borde{flex:0 1 auto}
+.ficha .acciones .boton{font-size:1rem;padding:14px 18px}
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.datos li{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px}
+.datos b{display:block;font:700 1.05rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.datos span{font-size:.84rem;color:var(--gris)}
+.terminada-aviso{background:#fff4d1;border-radius:14px;padding:12px 16px;margin:0 0 14px;color:#5a4a00;font-weight:600}
+.historial{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px;margin-top:28px;position:relative}
+.historial h2{font-size:1.25rem}
+.historial p{color:var(--gris);margin:6px 0 0}
+.grafico-caja{display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px;margin-top:16px}
+.eje-y{position:relative}
+.eje-y span{position:absolute;right:0;transform:translateY(-50%);font-size:.8rem;color:var(--gris);white-space:nowrap}
+.eje-x{display:flex;justify-content:space-between;margin:4px 0 0 78px;font-size:.8rem;color:var(--gris)}
+.grafico{width:100%;height:auto;display:block;touch-action:pan-y;overflow:visible}
+.grafico .rejilla{stroke:#e8ebf0;stroke-width:1;vector-effect:non-scaling-stroke}
+.grafico .linea{fill:none;stroke:var(--tinta);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;
+vector-effect:non-scaling-stroke}
+.grafico .punto{fill:var(--tinta);stroke:var(--blanco);stroke-width:2}
+.grafico .hoy{fill:var(--sol);stroke:var(--tinta);stroke-width:2}
+.grafico .guia{stroke:#9aa4b5;stroke-width:1;stroke-dasharray:3 3}
+.tip{position:absolute;pointer-events:none;background:var(--tinta);color:var(--blanco);font-size:.85rem;padding:6px 10px;
+border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
+.historial details{margin-top:12px}
+.historial summary{cursor:pointer;color:var(--tinta);font-weight:600;font-size:.92rem}
+.historial table{border-collapse:collapse;margin-top:8px;font-size:.9rem}
+.historial td,.historial th{padding:4px 14px 4px 0;text-align:left}
+.historial td+td{font-variant-numeric:tabular-nums}
+.tarjeta h3 a{text-decoration:none}
+.tarjeta h3 a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -343,11 +386,11 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
         <p class="tienda ml"><i></i>Mercado Libre<span class="estado-linea">Bajó</span></p>
         <h2 id="hero-titulo">Libro: Primero Yo, Después El Resto: 120 Sesiones De Verdad</h2>
         <p class="gondola grande"><span class="precio">$17.000</span><span class="baja descuento">-48%</span></p><p class="antes-linea">Antes <s>$33.000</s> el 01/11</p>
-        <span class="revision">Quedan 3 días · precio del 02/11 · ★ 4,8 · +1000 vendidos</span>
+        <span class="revision">Quedan 2 días · precio del 02/11 · ★ 4,8 · +1000 vendidos</span>
         <div class="acciones">
           <a class="boton oscuro" href="https://meli.la/2DQxPNs" rel="sponsored noopener" target="_blank"
              data-oferta="MLA73800060">Ver en Mercado Libre</a>
-          <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Libro%3A%20Primero%20Yo%2C%20Despu%C3%A9s%20El%20Resto%3A%20120%20Sesiones%20De%20Verdad%20a%20%2417.000%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA73800060" target="_blank" rel="noopener"
+          <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Libro%3A%20Primero%20Yo%2C%20Despu%C3%A9s%20El%20Resto%3A%20120%20Sesiones%20De%20Verdad%20a%20%2417.000%20https%3A//eldatazo.com.ar/oferta/MLA73800060/" target="_blank" rel="noopener"
              aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
         </div>
       </article>
@@ -359,7 +402,7 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
         <span class="cuenta">14 ofertas y 165 productos</span></a>
       <a class="lugar baja" href="/mercado-libre/#bajaron"><b>Bajaron de precio</b>
         <span>Lo que vimos más caro y hoy está más barato, con la fecha.</span>
-        <span class="cuenta">12 productos</span></a>
+        <span class="cuenta">11 productos</span></a>
       <a class="lugar" href="/mercado-libre/#vendidos"><b>Lo más vendido</b>
         <span>El ranking de cada rubro, con buena calificación.</span></a>
       <a class="lugar pronto" href="/viajes/"><b>Viajes</b>
@@ -367,156 +410,148 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
     </nav></div>
     <section class="seccion envoltura" aria-labelledby="hoy-titulo">
       <div class="seccion-cabeza"><div><h2 class="seccion-titulo" id="hoy-titulo">Ofertas de hoy en Mercado Libre</h2>
-        <p class="seccion-sub">14 ofertas vigentes · revisadas hoy a las 20:30</p></div><a class="ver-todo" href="/mercado-libre/">Ver las 14 ofertas</a></div>
+        <p class="seccion-sub">14 ofertas vigentes · revisadas el 06/11 a las 20:30</p></div><a class="ver-todo" href="/mercado-libre/">Ver las 14 ofertas</a></div>
       <div class="grilla">
-      <article class="tarjeta" id="MLA73800060" data-rubro="libros" data-pub="2026-11-02" data-quedan="3" data-precio="17000" data-bajo="49" data-texto="libro: primero yo, después el resto: 120 sesiones de verdad">
-        <a class="tarjeta-foto" href="https://meli.la/2DQxPNs" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA73800060">
+      <article class="tarjeta" id="MLA73800060" data-rubro="libros" data-pub="2026-11-02" data-quedan="2" data-precio="17000" data-bajo="49" data-texto="libro: primero yo, después el resto: 120 sesiones de verdad">
+        <a class="tarjeta-foto" href="/oferta/MLA73800060/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA73800060_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Libro: Primero Yo, Después El Resto: 120 Sesiones De Verdad</h3>
+          <h3><a href="/oferta/MLA73800060/">Libro: Primero Yo, Después El Resto: 120 Sesiones De Verdad</a></h3>
           <p class="gondola "><span class="precio">$17.000</span><span class="baja descuento">-48%</span></p><p class="antes-linea">Antes <s>$33.000</s> el 01/11</p><ul class="hechos"><li>★ 4,8</li><li>+1000 vendidos</li></ul>
-          <p class="nota">Quedan 3 días · precio del 02/11</p>
+          <p class="nota">Quedan 2 días · precio del 02/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/2DQxPNs" rel="sponsored noopener" target="_blank"
                data-oferta="MLA73800060"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Libro%3A%20Primero%20Yo%2C%20Despu%C3%A9s%20El%20Resto%3A%20120%20Sesiones%20De%20Verdad%20a%20%2417.000%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA73800060" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Libro%3A%20Primero%20Yo%2C%20Despu%C3%A9s%20El%20Resto%3A%20120%20Sesiones%20De%20Verdad%20a%20%2417.000%20https%3A//eldatazo.com.ar/oferta/MLA73800060/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA24729106" data-rubro="herramientas" data-pub="2026-11-02" data-quedan="3" data-precio="47890" data-bajo="13" data-texto="crique hidraulico carrito gato para autos 2 tn mejor calidad">
-        <a class="tarjeta-foto" href="https://meli.la/2ZwvMNb" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA24729106">
+      <article class="tarjeta" id="MLA24729106" data-rubro="herramientas" data-pub="2026-11-02" data-quedan="2" data-precio="47890" data-bajo="13" data-texto="crique hidraulico carrito gato para autos 2 tn mejor calidad">
+        <a class="tarjeta-foto" href="/oferta/MLA24729106/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA24729106_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Crique Hidraulico Carrito Gato Para Autos 2 Tn Mejor Calidad</h3>
+          <h3><a href="/oferta/MLA24729106/">Crique Hidraulico Carrito Gato Para Autos 2 Tn Mejor Calidad</a></h3>
           <p class="gondola "><span class="precio">$47.890</span><span class="baja descuento">-12%</span></p><p class="antes-linea">Antes <s>$54.533</s> el 01/11</p><p class="dato-precio">El más barato de 13 vendedores</p><ul class="hechos"><li>★ 4,5</li><li>+5mil vendidos</li></ul>
-          <p class="nota">Quedan 3 días · precio del 02/11</p>
+          <p class="nota">Quedan 2 días · precio del 02/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/2ZwvMNb" rel="sponsored noopener" target="_blank"
                data-oferta="MLA24729106"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Crique%20Hidraulico%20Carrito%20Gato%20Para%20Autos%202%20Tn%20Mejor%20Calidad%20a%20%2447.890%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA24729106" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Crique%20Hidraulico%20Carrito%20Gato%20Para%20Autos%202%20Tn%20Mejor%20Calidad%20a%20%2447.890%20https%3A//eldatazo.com.ar/oferta/MLA24729106/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA19719361" data-rubro="herramientas" data-pub="2026-11-02" data-quedan="3" data-precio="32899" data-bajo="11" data-texto="yelmo as-3240 aspiradora para auto recargable usb color gris">
-        <a class="tarjeta-foto" href="https://meli.la/1BA5g6k" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA19719361">
+      <article class="tarjeta" id="MLA19719361" data-rubro="herramientas" data-pub="2026-11-02" data-quedan="2" data-precio="32899" data-bajo="11" data-texto="yelmo as-3240 aspiradora para auto recargable usb color gris">
+        <a class="tarjeta-foto" href="/oferta/MLA19719361/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA19719361_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió y bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Yelmo As-3240 Aspiradora Para Auto Recargable Usb Color Gris</h3>
+          <h3><a href="/oferta/MLA19719361/">Yelmo As-3240 Aspiradora Para Auto Recargable Usb Color Gris</a></h3>
           <p class="gondola "><span class="precio">$32.899</span><span class="baja descuento">-10%</span></p><p class="antes-linea">Antes <s>$36.567</s> el 02/11</p><p class="dato-precio">El más barato de 34 vendedores</p><ul class="hechos"><li>★ 4,5</li><li>+50mil vendidos</li></ul>
-          <p class="nota">Quedan 3 días · precio del 03/11</p>
+          <p class="nota">Quedan 2 días · precio del 03/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/1BA5g6k" rel="sponsored noopener" target="_blank"
                data-oferta="MLA19719361"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Yelmo%20As-3240%20Aspiradora%20Para%20Auto%20Recargable%20Usb%20Color%20Gris%20a%20%2432.899%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA19719361" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Yelmo%20As-3240%20Aspiradora%20Para%20Auto%20Recargable%20Usb%20Color%20Gris%20a%20%2432.899%20https%3A//eldatazo.com.ar/oferta/MLA19719361/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA19472094" data-rubro="tecnologia" data-pub="2026-11-01" data-quedan="2" data-precio="69999" data-bajo="9" data-texto="god of war ragnarok ps4 juego físico nuevo sony original">
-        <a class="tarjeta-foto" href="https://meli.la/217QPCu" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA19472094">
+      <article class="tarjeta" id="MLA19472094" data-rubro="tecnologia" data-pub="2026-11-01" data-quedan="1" data-precio="69999" data-bajo="9" data-texto="god of war ragnarok ps4 juego físico nuevo sony original">
+        <a class="tarjeta-foto" href="/oferta/MLA19472094/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA19472094_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>God Of War Ragnarok Ps4 Juego Físico Nuevo Sony Original</h3>
+          <h3><a href="/oferta/MLA19472094/">God Of War Ragnarok Ps4 Juego Físico Nuevo Sony Original</a></h3>
           <p class="gondola "><span class="precio">$69.999</span><span class="baja descuento">-8%</span></p><p class="antes-linea">Antes <s>$75.999</s> el 01/11</p><p class="dato-precio">El más barato de 18 vendedores</p><ul class="hechos"><li>★ 4,9</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 2 días · precio del 03/11</p>
+          <p class="nota">Último día · precio del 03/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/217QPCu" rel="sponsored noopener" target="_blank"
                data-oferta="MLA19472094"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20God%20Of%20War%20Ragnarok%20Ps4%20Juego%20F%C3%ADsico%20Nuevo%20Sony%20Original%20a%20%2469.999%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA19472094" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20God%20Of%20War%20Ragnarok%20Ps4%20Juego%20F%C3%ADsico%20Nuevo%20Sony%20Original%20a%20%2469.999%20https%3A//eldatazo.com.ar/oferta/MLA19472094/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA23456165" data-rubro="belleza" data-pub="2026-11-01" data-quedan="2" data-precio="46932" data-bajo="8" data-texto="silfab al91 almohadilla eléctrica espalda large 41 x 28 cm">
-        <a class="tarjeta-foto" href="https://meli.la/2cQdCWW" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA23456165">
+      <article class="tarjeta" id="MLA23456165" data-rubro="belleza" data-pub="2026-11-01" data-quedan="1" data-precio="46932" data-bajo="8" data-texto="silfab al91 almohadilla eléctrica espalda large 41 x 28 cm">
+        <a class="tarjeta-foto" href="/oferta/MLA23456165/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA23456165_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió y bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Silfab AL91 Almohadilla Eléctrica Espalda Large 41 X 28 Cm</h3>
+          <h3><a href="/oferta/MLA23456165/">Silfab AL91 Almohadilla Eléctrica Espalda Large 41 X 28 Cm</a></h3>
           <p class="gondola "><span class="precio">$46.932</span><span class="baja descuento">-7%</span></p><p class="antes-linea">Antes <s>$50.465</s> el 24/10</p><p class="dato-precio">El más barato de 38 vendedores</p><ul class="hechos"><li>★ 4,7</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 2 días · precio del 02/11</p>
+          <p class="nota">Último día · precio del 02/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/2cQdCWW" rel="sponsored noopener" target="_blank"
                data-oferta="MLA23456165"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Silfab%20AL91%20Almohadilla%20El%C3%A9ctrica%20Espalda%20Large%2041%20X%2028%20Cm%20a%20%2446.932%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA23456165" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Silfab%20AL91%20Almohadilla%20El%C3%A9ctrica%20Espalda%20Large%2041%20X%2028%20Cm%20a%20%2446.932%20https%3A//eldatazo.com.ar/oferta/MLA23456165/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA63186370" data-rubro="tecnologia" data-pub="2026-11-01" data-quedan="2" data-precio="54454" data-bajo="6" data-texto="cámara digital kodak charmera rk0601 retro compacta para llavero y video">
-        <a class="tarjeta-foto" href="https://meli.la/2QAJKif" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA63186370">
+      <article class="tarjeta" id="MLA63186370" data-rubro="tecnologia" data-pub="2026-11-01" data-quedan="1" data-precio="54454" data-bajo="6" data-texto="cámara digital kodak charmera rk0601 retro compacta para llavero y video">
+        <a class="tarjeta-foto" href="/oferta/MLA63186370/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA63186370_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Cámara Digital Kodak Charmera RK0601 Retro Compacta para Llavero y Video</h3>
+          <h3><a href="/oferta/MLA63186370/">Cámara Digital Kodak Charmera RK0601 Retro Compacta para Llavero y Video</a></h3>
           <p class="gondola "><span class="precio">$54.454</span><span class="baja descuento">-5%</span></p><p class="antes-linea">Antes <s>$57.573</s> el 01/11</p><p class="dato-precio">El más barato de 23 vendedores</p><ul class="hechos"><li>★ 4,9</li><li>+1000 vendidos</li></ul>
-          <p class="nota">Quedan 2 días · precio del 02/11</p>
+          <p class="nota">Último día · precio del 02/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/2QAJKif" rel="sponsored noopener" target="_blank"
                data-oferta="MLA63186370"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20C%C3%A1mara%20Digital%20Kodak%20Charmera%20RK0601%20Retro%20Compacta%20para%20Llavero%20y%20Video%20a%20%2454.454%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA63186370" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20C%C3%A1mara%20Digital%20Kodak%20Charmera%20RK0601%20Retro%20Compacta%20para%20Llavero%20y%20Video%20a%20%2454.454%20https%3A//eldatazo.com.ar/oferta/MLA63186370/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA43803009" data-rubro="moda" data-pub="2026-11-02" data-quedan="3" data-precio="45087" data-bajo="5" data-texto="mochila viaje carry on avion porta notebook waggs negro lisa">
-        <a class="tarjeta-foto" href="https://meli.la/1Y9GX65" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA43803009">
+      <article class="tarjeta" id="MLA43803009" data-rubro="moda" data-pub="2026-11-02" data-quedan="2" data-precio="45087" data-bajo="5" data-texto="mochila viaje carry on avion porta notebook waggs negro lisa">
+        <a class="tarjeta-foto" href="/oferta/MLA43803009/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA43803009_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió y bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Mochila Viaje Carry On Avion Porta Notebook Waggs Negro Lisa</h3>
+          <h3><a href="/oferta/MLA43803009/">Mochila Viaje Carry On Avion Porta Notebook Waggs Negro Lisa</a></h3>
           <p class="gondola "><span class="precio">$45.087</span><span class="baja descuento">-4%</span></p><p class="antes-linea">Antes <s>$46.799</s> el 28/10</p><ul class="hechos"><li>★ 4,9</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 3 días · precio del 02/11</p>
+          <p class="nota">Quedan 2 días · precio del 02/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/1Y9GX65" rel="sponsored noopener" target="_blank"
                data-oferta="MLA43803009"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Mochila%20Viaje%20Carry%20On%20Avion%20Porta%20Notebook%20Waggs%20Negro%20Lisa%20a%20%2445.087%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA43803009" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Mochila%20Viaje%20Carry%20On%20Avion%20Porta%20Notebook%20Waggs%20Negro%20Lisa%20a%20%2445.087%20https%3A//eldatazo.com.ar/oferta/MLA43803009/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
       </article>
-      <article class="tarjeta" id="MLA76118504" data-rubro="belleza" data-pub="2026-11-06" data-quedan="7" data-precio="29000" data-bajo="2" data-texto="tensiometro digital brazo bluetooth presion arterial aparato para tomar presion batería recargable usb medidor automatico femmto kf-dt65s">
-        <a class="tarjeta-foto" href="https://meli.la/2V53bXq" rel="sponsored noopener" target="_blank" tabindex="-1"
-           aria-hidden="true" data-oferta="MLA76118504">
+      <article class="tarjeta" id="MLA76118504" data-rubro="belleza" data-pub="2026-11-06" data-quedan="6" data-precio="29000" data-bajo="2" data-texto="tensiometro digital brazo bluetooth presion arterial aparato para tomar presion batería recargable usb medidor automatico femmto kf-dt65s">
+        <a class="tarjeta-foto" href="/oferta/MLA76118504/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA76118504_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió y bajó</span>
         </a>
         <div class="cuerpo">
           <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3>Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S</h3>
+          <h3><a href="/oferta/MLA76118504/">Tensiometro Digital Brazo Bluetooth Presion Arterial Aparato Para Tomar Presion Batería Recargable Usb Medidor Automatico Femmto KF-DT65S</a></h3>
           <p class="gondola "><span class="precio">$29.000</span><span class="baja descuento">-1%</span></p><p class="antes-linea">Antes <s>$29.301</s> el 03/11</p><ul class="hechos"><li>★ 4,8</li><li>+100mil vendidos</li></ul>
-          <p class="nota">Quedan 7 días · precio del 06/11</p>
+          <p class="nota">Quedan 6 días · precio del 06/11</p>
           <div class="acciones">
             <a class="boton oscuro" href="https://meli.la/2V53bXq" rel="sponsored noopener" target="_blank"
                data-oferta="MLA76118504"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Tensiometro%20Digital%20Brazo%20Bluetooth%20Presion%20Arterial%20Aparato%20Para%20Tomar%20Presion%20Bater%C3%ADa%20Recargable%20Usb%20Medidor%20Automatico%20Femmto%20KF-DT65S%20a%20%2429.000%20https%3A//eldatazo.com.ar/mercado-libre/%23MLA76118504" target="_blank" rel="noopener"
+            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Tensiometro%20Digital%20Brazo%20Bluetooth%20Presion%20Arterial%20Aparato%20Para%20Tomar%20Presion%20Bater%C3%ADa%20Recargable%20Usb%20Medidor%20Automatico%20Femmto%20KF-DT65S%20a%20%2429.000%20https%3A//eldatazo.com.ar/oferta/MLA76118504/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
@@ -525,7 +560,7 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
     </section>
     <div class="envoltura seccion">
   <section class="franja-bajo" aria-labelledby="bajo-titulo">
-    <div class="franja-cabeza"><h2 id="bajo-titulo">Bajaron de precio</h2><span class="cuenta">12</span></div>
+    <div class="franja-cabeza"><h2 id="bajo-titulo">Bajaron de precio</h2><span class="cuenta">11</span></div>
     <ul class="franja-lista">
         <li><a href="/mercado-libre/#MLA73800060"><img src="/img/MLA73800060_f.jpg" alt="" loading="lazy">
           <span><b>Libro: Primero Yo, Después El Resto: 120 Sesiones De Verdad</b><span class="ahora">$17.000</span>
@@ -560,9 +595,6 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
         <li><a href="/mercado-libre/#MLA28878536"><img src="/img/MLA28878536_f.jpg" alt="" loading="lazy">
           <span><b>BOTIQUÍN DE BAÑO TRENTO AMUBE 30x50 CM | Espejo y Repisa | Melamina Blanca</b><span class="ahora">$43.999</span>
           <span class="bajo">Volvió la oferta</span></span></a></li>
-        <li><a href="https://meli.la/2oPyPUm" rel="sponsored noopener" target="_blank" data-oferta="MLA18651916"><img src="https://http2.mlstatic.com/D_Q_NP_697638-MLA99515510390_112025-AB.webp" alt="" loading="lazy" referrerpolicy="no-referrer">
-          <span><b>Auriculares Gamer G435 Logitech G Wireless Gaming Headset Color Negro/Amarillo fluorescente</b><span class="ahora">$172.017</span>
-          <span class="bajo">▼ 41% · antes $290.992</span></span></a></li>
     </ul>
   </section></div>
   <section class="seccion" id="como-elegimos" aria-labelledby="porque-titulo"><div class="envoltura">
@@ -597,7 +629,7 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 06/11/2026 a las 20:30 (hora argentina).</p>
+        <p>Actualizado el 07/11/2026 a las 07:38 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>

@@ -304,6 +304,49 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
 
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}@view-transition{navigation:none}
 *{transition:none!important;animation:none!important}}
+
+.migas{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none;font-size:.88rem;color:#c9d0dc}
+.migas a{color:var(--blanco)}
+.migas li+li::before{content:"/";margin-right:6px;color:#8a95a8}
+.ficha{display:grid;gap:28px;padding:32px 0 8px}
+@media (min-width:860px){.ficha{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.ficha-foto{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;aspect-ratio:1/1;padding:28px;
+display:flex;align-items:center;justify-content:center}
+.ficha-foto img{width:100%;height:100%;object-fit:contain}
+.ficha-foto.terminada img{filter:grayscale(1);opacity:.6}
+.ficha h1{font-size:clamp(1.4rem,3vw,2rem);margin:8px 0 16px}
+.ficha .gondola .precio{font-size:2.2rem}
+.ficha .acciones{margin-top:18px;max-width:560px;flex-wrap:wrap}
+.ficha .acciones .boton.borde{flex:0 1 auto}
+.ficha .acciones .boton{font-size:1rem;padding:14px 18px}
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.datos li{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px}
+.datos b{display:block;font:700 1.05rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.datos span{font-size:.84rem;color:var(--gris)}
+.terminada-aviso{background:#fff4d1;border-radius:14px;padding:12px 16px;margin:0 0 14px;color:#5a4a00;font-weight:600}
+.historial{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px;margin-top:28px;position:relative}
+.historial h2{font-size:1.25rem}
+.historial p{color:var(--gris);margin:6px 0 0}
+.grafico-caja{display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px;margin-top:16px}
+.eje-y{position:relative}
+.eje-y span{position:absolute;right:0;transform:translateY(-50%);font-size:.8rem;color:var(--gris);white-space:nowrap}
+.eje-x{display:flex;justify-content:space-between;margin:4px 0 0 78px;font-size:.8rem;color:var(--gris)}
+.grafico{width:100%;height:auto;display:block;touch-action:pan-y;overflow:visible}
+.grafico .rejilla{stroke:#e8ebf0;stroke-width:1;vector-effect:non-scaling-stroke}
+.grafico .linea{fill:none;stroke:var(--tinta);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;
+vector-effect:non-scaling-stroke}
+.grafico .punto{fill:var(--tinta);stroke:var(--blanco);stroke-width:2}
+.grafico .hoy{fill:var(--sol);stroke:var(--tinta);stroke-width:2}
+.grafico .guia{stroke:#9aa4b5;stroke-width:1;stroke-dasharray:3 3}
+.tip{position:absolute;pointer-events:none;background:var(--tinta);color:var(--blanco);font-size:.85rem;padding:6px 10px;
+border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
+.historial details{margin-top:12px}
+.historial summary{cursor:pointer;color:var(--tinta);font-weight:600;font-size:.92rem}
+.historial table{border-collapse:collapse;margin-top:8px;font-size:.9rem}
+.historial td,.historial th{padding:4px 14px 4px 0;text-align:left}
+.historial td+td{font-variant-numeric:tabular-nums}
+.tarjeta h3 a{text-decoration:none}
+.tarjeta h3 a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -346,7 +389,7 @@ footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 06/11/2026 a las 20:30 (hora argentina).</p>
+        <p>Actualizado el 07/11/2026 a las 07:38 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
