@@ -138,13 +138,36 @@ text-decoration:none;box-shadow:var(--sombra);border:1px solid var(--linea);tran
 background:var(--papel);color:var(--tinta)}
 .lugar.ml .cuenta{background:var(--sol)}
 .lugar.baja .cuenta{background:var(--verde-claro);color:#006b34}
+@media (max-width:600px){.lugares{grid-template-columns:1fr 1fr;gap:10px}.lugar{padding:14px}
+.lugar b{font-size:1rem}.lugar span:not(.cuenta){display:none}.lugar .cuenta{font-size:.78rem}}
 .lugar.pronto{background:var(--papel);box-shadow:none;border:2px dashed #c3cad5}
 .lugar.pronto .cuenta{background:var(--blanco)}
+
+/* tiendas y servicios (ED-28) */
+.tiendas-lista,.servicios-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:0;
+padding:0;list-style:none}
+.tienda-fila,.servicio{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:22px;
+display:flex;flex-direction:column;gap:8px}
+.tienda-fila h2{font-size:1.3rem}
+.tienda-fila p,.servicio p{margin:0;color:#3a4456}
+.tienda-fila .boton,.servicio .boton{align-self:flex-start;margin-top:auto}
+.servicio h3{font-size:1.15rem}
+.servicio-ico{display:inline-flex;width:44px;height:44px;border-radius:12px;background:var(--papel);color:var(--tinta);
+align-items:center;justify-content:center}
+.servicio-ico svg{width:24px;height:24px}
+.pasos{margin:4px 0 6px;padding-left:20px;color:#3a4456;font-size:.94rem}
+.pasos li{margin:3px 0}
+.estado-pronto{align-self:flex-start;margin-top:auto;font:700 .85rem Poppins,system-ui,sans-serif;padding:5px 12px;
+border-radius:999px;background:var(--papel);color:var(--gris);border:1px dashed #c3cad5}
+.pronto-chico{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;color:var(--gris);text-decoration:none;
+padding:10px 12px;border-radius:12px;border:1px dashed #c3cad5}
+.pronto-chico:hover{color:var(--tinta);border-color:var(--tinta)}
 
 /* tienda de cada producto */
 .tienda{display:flex;align-items:center;gap:7px;margin:0;font-size:.82rem;font-weight:600;color:var(--gris)}
 .tienda i{width:10px;height:10px;border-radius:50%;background:var(--gris);flex:none}
 .tienda.ml i{background:var(--sol);box-shadow:0 0 0 2px #e8bd00 inset}
+.tienda.shopee i{background:#ee4d2d}.tienda.decat i{background:#0f9d8a}.tienda.gadget i{background:#6c4ad8}
 .estado-linea{margin-left:6px;font:700 .78rem Poppins,system-ui,sans-serif;background:var(--verde-claro);color:#006b34;
 padding:3px 10px;border-radius:999px}
 
@@ -355,7 +378,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
   <header class="cabecera">
     <div class="envoltura cabecera-fila">
       <a class="marca" href="/" aria-label="El Datazo, inicio"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M3 9.5 L27 2.5 L38 11 L33 24 L9 28.5 Z" fill="#ffd21f" stroke="#ffd21f" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="16" r="2.6" fill="#16233f"/><path d="M24 6.5 L18.5 16.5 L23 16 L20.5 24 L27 13 L22.5 13.5 Z" fill="#16233f"/></svg><span class="marca-nombre">El <span>Datazo</span></span></a>
-      <nav class="menu" aria-label="Secciones"><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
+      <nav class="menu" aria-label="Secciones"><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
     </div>
   </header>
   <main id="contenido">
@@ -374,7 +397,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
           <h1>Buclera de Pelo Gadnic B3000 Rizador 3 Tubos 25 mm 150W 180 210 C</h1>
           <p class="gondola grande"><span class="precio">$43.582</span></p><p class="dato-precio">El más barato de 4 vendedores</p>
           <span class="revision">Quedan 2 días · precio del 06/11</span>
-          <div class="acciones"><a class="boton oscuro" href="https://meli.la/1HyqnAD" rel="sponsored noopener" target="_blank" data-oferta="MLA22130330">Ver en Mercado Libre</a><a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Buclera%20de%20Pelo%20Gadnic%20B3000%20Rizador%203%20Tubos%2025%20mm%20150W%20180%20210%20C%20a%20%2443.582%20https%3A//eldatazo.com.ar/oferta/MLA22130330/" target="_blank" rel="noopener" aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></div>
+          <div class="acciones"><a class="boton oscuro" href="https://meli.la/1HyqnAD" rel="sponsored noopener" target="_blank" data-oferta="MLA22130330">Ver en Mercado Libre</a><a class="pronto-chico" href="/servicios/#avisame"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Avisame si baja · próximamente</a><a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Buclera%20de%20Pelo%20Gadnic%20B3000%20Rizador%203%20Tubos%2025%20mm%20150W%20180%20210%20C%20a%20%2443.582%20https%3A//eldatazo.com.ar/oferta/MLA22130330/" target="_blank" rel="noopener" aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a></div>
           <ul class="datos"><li><b>★ 4,6</b><span>Calificación en Mercado Libre</span></li><li><b>+10mil vendidos</b><span>Vendidos</span></li><li><b>4</b><span>Vendedores que revisamos</span></li><li><b>$52.009</b><span>Precio del vendedor del medio</span></li></ul>
           <p class="nota" style="margin-top:14px">Link de afiliado: si comprás, El Datazo puede recibir una comisión, sin que
           cambie tu precio.</p>
@@ -462,9 +485,9 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 07/11/2026 a las 07:38 (hora argentina).</p>
+        <p>Actualizado el 07/11/2026 a las 08:17 (hora argentina).</p>
       </div>
-      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
+      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
     </div>
   </footer>
