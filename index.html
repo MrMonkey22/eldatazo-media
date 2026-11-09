@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>El Datazo · Ofertas revisadas cada hora</title>
-  <meta name="description" content="Ofertas de Mercado Libre Argentina elegidas y revisadas todos los días por El Datazo, con el precio y la fecha en que se vio cada una.">
+  <title>El Datazo · Ofertas revisadas todos los días</title>
+  <meta name="description" content="Ofertas de El Gadget, Mercado Libre y viajes elegidas y revisadas todos los días por El Datazo, con el precio y la fecha en que se vio cada una.">
   <meta name="theme-color" content="#16233f">
   <link rel="icon" href="/logo.png">
   <link rel="canonical" href="https://eldatazo.com.ar/">
@@ -12,8 +12,8 @@
   <meta property="og:site_name" content="El Datazo">
   <meta property="og:locale" content="es_AR">
   <meta property="og:url" content="https://eldatazo.com.ar/">
-  <meta property="og:title" content="El Datazo · Ofertas revisadas cada hora">
-  <meta property="og:description" content="Ofertas de Mercado Libre Argentina elegidas y revisadas todos los días por El Datazo, con el precio y la fecha en que se vio cada una.">
+  <meta property="og:title" content="El Datazo · Ofertas revisadas todos los días">
+  <meta property="og:description" content="Ofertas de El Gadget, Mercado Libre y viajes elegidas y revisadas todos los días por El Datazo, con el precio y la fecha en que se vio cada una.">
   <meta property="og:image" content="https://eldatazo.com.ar/logo.png">
   <meta name="twitter:card" content="summary">
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://eldatazo.com.ar/#web", "url": "https://eldatazo.com.ar/", "name": "El Datazo", "inLanguage": "es-AR", "publisher": {"@id": "https://eldatazo.com.ar/#marca"}, "potentialAction": {"@type": "SearchAction", "target": "https://eldatazo.com.ar/buscar/?q={search_term_string}", "query-input": "required name=search_term_string"}}, {"@type": "Organization", "@id": "https://eldatazo.com.ar/#marca", "name": "El Datazo", "url": "https://eldatazo.com.ar/", "logo": "https://eldatazo.com.ar/logo.png", "sameAs": ["https://www.instagram.com/eldatazo.arg/", "https://www.facebook.com/profile.php?id=61595441168911", "https://t.me/eldatazo_ofertas"]}]}</script>
@@ -168,6 +168,7 @@ padding:10px 12px;border-radius:12px;border:1px dashed #c3cad5}
 .tienda i{width:10px;height:10px;border-radius:50%;background:var(--gris);flex:none}
 .tienda.ml i{background:var(--sol);box-shadow:0 0 0 2px #e8bd00 inset}
 .tienda.shopee i{background:#ee4d2d}.tienda.decat i{background:#0f9d8a}.tienda.gadget i{background:#6c4ad8}
+.tienda.viajes i{background:#1d9e75}
 .estado-linea{margin-left:6px;font:700 .78rem Poppins,system-ui,sans-serif;background:var(--verde-claro);color:#006b34;
 padding:3px 10px;border-radius:999px}
 
@@ -334,6 +335,8 @@ border-radius:999px;padding:6px 12px;text-decoration:none}
 .g-precio span{font:400 .8rem system-ui,sans-serif;color:var(--gris)}
 .g-bajo{margin:0;color:var(--verde);font-weight:600;font-size:.9rem}.g-codigo{margin:0;font-size:.9rem;color:#3a4456}
 .g-tarjeta .boton{margin-top:auto;align-self:stretch;text-align:center}.g-revisado{margin:0;font-size:.78rem;color:var(--gris)}
+.pasos-codigo{margin:14px 0 0;padding-left:22px;color:#dfe4ec;max-width:46em}.pasos-codigo li+li{margin-top:4px}
+.pasos-codigo b{color:var(--sol)}
 .g-cat{font-size:1.25rem;margin:8px 0 12px;scroll-margin-top:90px}
 .ver-guia{display:inline-block;margin-top:8px;font:600 .88rem system-ui,sans-serif;color:var(--tinta)}
 .guias-viaje{margin:0 0 26px}.guias-viaje>h2{font-size:1.35rem;margin:0 0 10px}
@@ -439,7 +442,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
   <header class="cabecera">
     <div class="envoltura cabecera-fila">
       <a class="marca" href="/" aria-label="El Datazo, inicio"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M3 9.5 L27 2.5 L38 11 L33 24 L9 28.5 Z" fill="#ffd21f" stroke="#ffd21f" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="16" r="2.6" fill="#16233f"/><path d="M24 6.5 L18.5 16.5 L23 16 L20.5 24 L27 13 L22.5 13.5 Z" fill="#16233f"/></svg><span class="marca-nombre">El <span>Datazo</span></span></a>
-      <nav class="menu" aria-label="Secciones"><a href="/" aria-current="page">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/vuelos/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
+      <nav class="menu" aria-label="Secciones"><a href="/ofertas/">Ofertas</a><a href="/viajes/vuelos/">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
     </div>
   </header>
   <main id="contenido">
@@ -447,19 +450,19 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
       <div class="envoltura portada-fila">
         <div>
           <h1>Comprá mejor, no solo más barato.</h1>
-          <p class="bajada">Revisamos el precio, el vendedor y las ventas de cada producto, cada hora. Si el precio sube o
-          se termina el stock, te lo decimos. <a href="/como-elegimos/">Cómo elegimos</a></p>
+          <p class="bajada">Productos, viajes y más: revisamos el precio y el stock en cada tienda antes de mostrártelo. Si
+          el precio sube o se termina el stock, te lo decimos. <a href="/como-elegimos/">Cómo elegimos</a></p>
       <form class="busca" role="search" action="/buscar/" method="get" data-busca>
-        <label class="oculto" for="q">Buscar en Mercado Libre</label>
-        <input id="q" name="q" type="search" placeholder="¿Qué buscás?" autocomplete="off"
+        <label class="oculto" for="q">Buscar en El Datazo</label>
+        <input id="q" name="q" type="search" placeholder="Productos, pasajes, eSIM…" autocomplete="off"
                enterkeyhint="search" maxlength="80">
         <button type="submit">Buscar</button>
       </form>
       
           <ul class="confianza">
-            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg>Calificación de 4,5 o más</li>
-            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.4" fill="currentColor"/><circle cx="17" cy="19.5" r="1.4" fill="currentColor"/></svg>Más de 500 vendidos</li>
-            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Precios revisados cada hora</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.3-5.6M20 4v5h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Precios revisados todos los días</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M3 4h2l2.4 11h11L21 7H6.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19.5" r="1.4" fill="currentColor"/><circle cx="17" cy="19.5" r="1.4" fill="currentColor"/></svg>Solo productos con stock</li>
+            <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" fill="currentColor"/></svg>Bajas reales, con la fecha</li>
           </ul>
         </div>
       <article class="destacada-hoy" id="hoy-MLA24729106" aria-labelledby="hero-titulo">
@@ -481,6 +484,9 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
       </div>
     </section>
     <div class="envoltura"><nav class="lugares" aria-label="Dónde buscar">
+      <a class="lugar" href="/tiendas/el-gadget/"><b>El Gadget</b>
+        <span>Hogar, cocina, verano y gadgets, con descuento por nuestro link.</span>
+        <span class="cuenta">198 productos</span></a>
       <a class="lugar ml" href="/mercado-libre/"><b>Mercado Libre</b>
         <span>Ofertas revisadas hoy y los productos que vale la pena mirar.</span>
         <span class="cuenta">38 ofertas y 156 productos</span></a>
@@ -491,17 +497,82 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <span>El ranking de cada rubro, con buena calificación.</span></a>
       <a class="lugar pronto" href="/tiendas/#shopee"><b>Shopee</b><span>Ofertas de Shopee Argentina, con el mismo criterio: buenas calificaciones y precio real.</span><span class="cuenta">Próximamente</span></a>
       <a class="lugar pronto" href="/tiendas/#decat-hogar"><b>Decat Hogar</b><span>Artículos para la casa: electro, bazar y equipamiento.</span><span class="cuenta">Próximamente</span></a>
-      <a class="lugar" href="/tiendas/el-gadget/"><b>El Gadget</b>
-        <span>Hogar, cocina, verano y gadgets, con descuento por nuestro link.</span>
-        <span class="cuenta">198 productos</span></a>
       <a class="lugar" href="/viajes/vuelos/"><b>Viajes</b>
         <span>Vuelos, internet en el viaje, traslados, autos, paseos y más.</span>
         <span class="cuenta">8 secciones</span></a>
     </nav></div>
     <section class="seccion envoltura" aria-labelledby="hoy-titulo">
-      <div class="seccion-cabeza"><div><h2 class="seccion-titulo" id="hoy-titulo">Ofertas de hoy en Mercado Libre</h2>
-        <p class="seccion-sub">38 ofertas vigentes · revisadas hoy a las 08:30</p></div><a class="ver-todo" href="/mercado-libre/">Ver las 38 ofertas</a></div>
+      <div class="seccion-cabeza"><div><h2 class="seccion-titulo" id="hoy-titulo">Mejores datazos de hoy</h2>
+        <p class="seccion-sub">De todas las tiendas · 62 ofertas vigentes · revisadas hoy a las 08:30</p></div><a class="ver-todo" href="/ofertas/">Ver todas las ofertas</a></div>
       <div class="grilla">
+      <article class="tarjeta" id="g-DL2276">
+        <a class="tarjeta-foto" href="https://elgadget.com.ar/producto/organizador-escurridor-platos-metalico-extraible-adhesivo-bajo-bacha-dl2276/?ref=EL48" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+          <img src="/img/gadget/DL2276.jpg" alt="" loading="lazy" width="480" height="480">
+        </a>
+        <div class="cuerpo">
+          <p class="tienda gadget"><i></i>El Gadget</p>
+          <h3><a href="https://elgadget.com.ar/producto/organizador-escurridor-platos-metalico-extraible-adhesivo-bajo-bacha-dl2276/?ref=EL48" target="_blank" rel="sponsored noopener">Organizador Escurridor Platos Metálico Extraíble Adhesivo Bajo Bacha</a></h3>
+          <p class="gondola"><span class="precio">$75.500</span></p>
+          <p class="dato-precio">Con el código EL48 pagás 10% a 20% menos: el descuento aparece al finalizar la compra.</p>
+          <p class="nota">Revisado el 09/11 a las 08:19 en El Gadget.</p>
+          <div class="acciones">
+            <a class="boton oscuro" href="https://elgadget.com.ar/producto/organizador-escurridor-platos-metalico-extraible-adhesivo-bajo-bacha-dl2276/?ref=EL48" rel="sponsored noopener" target="_blank"
+               data-gadget="DL2276"><span class="largo">Ver en El Gadget</span><span class="corto"
+               aria-hidden="true">Ver oferta</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="tarjeta" id="g-DL2277">
+        <a class="tarjeta-foto" href="https://elgadget.com.ar/producto/organizador-escurre-platos-extraible-adhesivo-para-alacena-dl2277/?ref=EL48" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+          <img src="/img/gadget/DL2277.jpg" alt="" loading="lazy" width="480" height="480">
+        </a>
+        <div class="cuerpo">
+          <p class="tienda gadget"><i></i>El Gadget</p>
+          <h3><a href="https://elgadget.com.ar/producto/organizador-escurre-platos-extraible-adhesivo-para-alacena-dl2277/?ref=EL48" target="_blank" rel="sponsored noopener">Organizador Escurre Platos Extraíble Adhesivo para Alacena</a></h3>
+          <p class="gondola"><span class="precio">$73.000</span></p>
+          <p class="dato-precio">Con el código EL48 pagás 10% a 20% menos: el descuento aparece al finalizar la compra.</p>
+          <p class="nota">Revisado el 09/11 a las 08:19 en El Gadget.</p>
+          <div class="acciones">
+            <a class="boton oscuro" href="https://elgadget.com.ar/producto/organizador-escurre-platos-extraible-adhesivo-para-alacena-dl2277/?ref=EL48" rel="sponsored noopener" target="_blank"
+               data-gadget="DL2277"><span class="largo">Ver en El Gadget</span><span class="corto"
+               aria-hidden="true">Ver oferta</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="tarjeta" id="g-WH7170OSO-80">
+        <a class="tarjeta-foto" href="https://elgadget.com.ar/producto/body-infantil-osito-80cm-el-mas-tierno-en-oferta-wh7170oso-80/?ref=EL48" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+          <img src="/img/gadget/WH7170OSO-80.jpg" alt="" loading="lazy" width="480" height="480">
+        </a>
+        <div class="cuerpo">
+          <p class="tienda gadget"><i></i>El Gadget</p>
+          <h3><a href="https://elgadget.com.ar/producto/body-infantil-osito-80cm-el-mas-tierno-en-oferta-wh7170oso-80/?ref=EL48" target="_blank" rel="sponsored noopener">Body infantil Osito 80cm – El más tierno en oferta</a></h3>
+          <p class="gondola"><span class="precio">$53.000</span></p>
+          <p class="dato-precio">Con el código EL48 pagás 10% a 20% menos: el descuento aparece al finalizar la compra.</p>
+          <p class="nota">Revisado el 09/11 a las 08:19 en El Gadget.</p>
+          <div class="acciones">
+            <a class="boton oscuro" href="https://elgadget.com.ar/producto/body-infantil-osito-80cm-el-mas-tierno-en-oferta-wh7170oso-80/?ref=EL48" rel="sponsored noopener" target="_blank"
+               data-gadget="WH7170OSO-80"><span class="largo">Ver en El Gadget</span><span class="corto"
+               aria-hidden="true">Ver oferta</span></a>
+          </div>
+        </div>
+      </article>
+      <article class="tarjeta" id="g-WH7170PAN-73">
+        <a class="tarjeta-foto" href="https://elgadget.com.ar/producto/body-infantil-de-bebe-oso-panda-73cm-para-la-ternura-de-tu-pequeno-wh7170pan-73/?ref=EL48" target="_blank" rel="sponsored noopener" tabindex="-1" aria-hidden="true">
+          <img src="/img/gadget/WH7170PAN-73.jpg" alt="" loading="lazy" width="480" height="480">
+        </a>
+        <div class="cuerpo">
+          <p class="tienda gadget"><i></i>El Gadget</p>
+          <h3><a href="https://elgadget.com.ar/producto/body-infantil-de-bebe-oso-panda-73cm-para-la-ternura-de-tu-pequeno-wh7170pan-73/?ref=EL48" target="_blank" rel="sponsored noopener">Body infantil de bebé Oso Panda 73cm para la ternura de tu pequeño</a></h3>
+          <p class="gondola"><span class="precio">$53.000</span></p>
+          <p class="dato-precio">Con el código EL48 pagás 10% a 20% menos: el descuento aparece al finalizar la compra.</p>
+          <p class="nota">Revisado el 09/11 a las 08:19 en El Gadget.</p>
+          <div class="acciones">
+            <a class="boton oscuro" href="https://elgadget.com.ar/producto/body-infantil-de-bebe-oso-panda-73cm-para-la-ternura-de-tu-pequeno-wh7170pan-73/?ref=EL48" rel="sponsored noopener" target="_blank"
+               data-gadget="WH7170PAN-73"><span class="largo">Ver en El Gadget</span><span class="corto"
+               aria-hidden="true">Ver oferta</span></a>
+          </div>
+        </div>
+      </article>
       <article class="tarjeta" id="MLA24729106" data-rubro="herramientas" data-pub="2026-11-02" data-quedan="7" data-precio="47990" data-bajo="13" data-texto="crique hidraulico carrito gato para autos 2 tn mejor calidad">
         <a class="tarjeta-foto" href="/oferta/MLA24729106/" tabindex="-1" aria-hidden="true">
           <img src="/img/MLA24729106_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Bajó</span>
@@ -570,78 +641,6 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                data-oferta="MLA63186370"><span class="largo">Ver en Mercado Libre</span><span class="corto"
                aria-hidden="true">Ver oferta</span></a>
             <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20C%C3%A1mara%20Digital%20Kodak%20Charmera%20RK0601%20Retro%20Compacta%20para%20Llavero%20y%20Video%20a%20%2454.454%20https%3A//eldatazo.com.ar/oferta/MLA63186370/" target="_blank" rel="noopener"
-               aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
-          </div>
-        </div>
-      </article>
-      <article class="tarjeta" id="MLA23027132" data-rubro="otros" data-pub="2026-11-08" data-quedan="6" data-precio="72546" data-bajo="1" data-texto="calculadora cientifica casio fx-991lacw classwiz">
-        <a class="tarjeta-foto" href="/oferta/MLA23027132/" tabindex="-1" aria-hidden="true">
-          <img src="/img/MLA23027132_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió</span>
-        </a>
-        <div class="cuerpo">
-          <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3><a href="/oferta/MLA23027132/">Calculadora Cientifica Casio Fx-991lacw Classwiz</a></h3>
-          <p class="gondola "><span class="precio">$72.546</span></p><p class="dato-precio">El más barato de 28 vendedores</p><ul class="hechos"><li>★ 4,9</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 6 días · revisado hoy a las 08:30</p>
-          <div class="acciones">
-            <a class="boton oscuro" href="https://meli.la/2smJXfh" rel="sponsored noopener" target="_blank"
-               data-oferta="MLA23027132"><span class="largo">Ver en Mercado Libre</span><span class="corto"
-               aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Calculadora%20Cientifica%20Casio%20Fx-991lacw%20Classwiz%20a%20%2472.546%20https%3A//eldatazo.com.ar/oferta/MLA23027132/" target="_blank" rel="noopener"
-               aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
-          </div>
-        </div>
-      </article>
-      <article class="tarjeta" id="MLA19576694" data-rubro="herramientas" data-pub="2026-11-07" data-quedan="5" data-precio="42383" data-bajo="1" data-texto="bomba periferica elevadora agua vasser 1/2 hp 20mts caudal 30 l/m">
-        <a class="tarjeta-foto" href="/oferta/MLA19576694/" tabindex="-1" aria-hidden="true">
-          <img src="/img/MLA19576694_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió</span>
-        </a>
-        <div class="cuerpo">
-          <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3><a href="/oferta/MLA19576694/">Bomba Periferica Elevadora Agua Vasser 1/2 Hp 20mts caudal 30 l/m</a></h3>
-          <p class="gondola "><span class="precio">$42.383</span></p><p class="dato-precio">El más barato de 51 vendedores</p><ul class="hechos"><li>★ 4,6</li><li>+50mil vendidos</li></ul>
-          <p class="nota">Quedan 5 días · revisado hoy a las 08:30</p>
-          <div class="acciones">
-            <a class="boton oscuro" href="https://meli.la/2nztThe" rel="sponsored noopener" target="_blank"
-               data-oferta="MLA19576694"><span class="largo">Ver en Mercado Libre</span><span class="corto"
-               aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Bomba%20Periferica%20Elevadora%20Agua%20Vasser%201/2%20Hp%2020mts%20caudal%2030%20l/m%20a%20%2442.383%20https%3A//eldatazo.com.ar/oferta/MLA19576694/" target="_blank" rel="noopener"
-               aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
-          </div>
-        </div>
-      </article>
-      <article class="tarjeta" id="MLA47200126" data-rubro="chicos" data-pub="2026-11-04" data-quedan="2" data-precio="31599" data-bajo="1" data-texto="extractor de leche eléctrico mawe by gadnic rh-289 150 ml 9 niveles pantalla led batería recargable 1200mah">
-        <a class="tarjeta-foto" href="/oferta/MLA47200126/" tabindex="-1" aria-hidden="true">
-          <img src="/img/MLA47200126_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió</span>
-        </a>
-        <div class="cuerpo">
-          <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3><a href="/oferta/MLA47200126/">Extractor De Leche Eléctrico Mawe By Gadnic RH-289 150 ml 9 Niveles Pantalla LED Batería Recargable 1200mAh</a></h3>
-          <p class="gondola "><span class="precio">$31.599</span></p><p class="dato-precio">El más barato de 3 vendedores</p><ul class="hechos"><li>★ 4,7</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 2 días · revisado hoy a las 08:30</p>
-          <div class="acciones">
-            <a class="boton oscuro" href="https://meli.la/314C11i" rel="sponsored noopener" target="_blank"
-               data-oferta="MLA47200126"><span class="largo">Ver en Mercado Libre</span><span class="corto"
-               aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Extractor%20De%20Leche%20El%C3%A9ctrico%20Mawe%20By%20Gadnic%20RH-289%20150%20ml%209%20Niveles%20Pantalla%20LED%20Bater%C3%ADa%20Recargable%201200mAh%20a%20%2431.599%20https%3A//eldatazo.com.ar/oferta/MLA47200126/" target="_blank" rel="noopener"
-               aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
-          </div>
-        </div>
-      </article>
-      <article class="tarjeta" id="MLA22130330" data-rubro="belleza" data-pub="2026-11-02" data-quedan="7" data-precio="44462" data-bajo="1" data-texto="buclera de pelo gadnic b3000 rizador 3 tubos 25 mm 150w 180 210 c">
-        <a class="tarjeta-foto" href="/oferta/MLA22130330/" tabindex="-1" aria-hidden="true">
-          <img src="/img/MLA22130330_f.jpg" alt="" loading="lazy" width="800" height="800"><span class="estado">Volvió</span>
-        </a>
-        <div class="cuerpo">
-          <p class="tienda ml"><i></i>Mercado Libre</p>
-          <h3><a href="/oferta/MLA22130330/">Buclera de Pelo Gadnic B3000 Rizador 3 Tubos 25 mm 150W 180 210 C</a></h3>
-          <p class="gondola "><span class="precio">$44.463</span></p><p class="dato-precio">El más barato de 4 vendedores</p><ul class="hechos"><li>★ 4,6</li><li>+10mil vendidos</li></ul>
-          <p class="nota">Quedan 7 días · revisado hoy a las 08:30</p>
-          <div class="acciones">
-            <a class="boton oscuro" href="https://meli.la/1HyqnAD" rel="sponsored noopener" target="_blank"
-               data-oferta="MLA22130330"><span class="largo">Ver en Mercado Libre</span><span class="corto"
-               aria-hidden="true">Ver oferta</span></a>
-            <a class="icono compartir" href="https://wa.me/?text=Mir%C3%A1%20este%20datazo%3A%20Buclera%20de%20Pelo%20Gadnic%20B3000%20Rizador%203%20Tubos%2025%20mm%20150W%20180%20210%20C%20a%20%2444.463%20https%3A//eldatazo.com.ar/oferta/MLA22130330/" target="_blank" rel="noopener"
                aria-label="Compartir por WhatsApp" title="Compartir por WhatsApp"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
@@ -731,9 +730,9 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 09/11/2026 a las 08:41 (hora argentina).</p>
+        <p>Actualizado el 09/11/2026 a las 09:23 (hora argentina).</p>
       </div>
-      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/vuelos/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
+      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/ofertas/">Ofertas</a><a href="/viajes/vuelos/">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/">Mercado Libre</a><a href="/servicios/">Servicios</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
     </div>
   </footer>
