@@ -334,6 +334,7 @@ border-radius:999px;padding:6px 12px;text-decoration:none}
 .g-precio span{font:400 .8rem system-ui,sans-serif;color:var(--gris)}
 .g-bajo{margin:0;color:var(--verde);font-weight:600;font-size:.9rem}.g-codigo{margin:0;font-size:.9rem;color:#3a4456}
 .g-tarjeta .boton{margin-top:auto;align-self:stretch;text-align:center}.g-revisado{margin:0;font-size:.78rem;color:var(--gris)}
+.res-grupo{grid-column:1/-1;margin:14px 0 0;font:700 1.2rem Poppins,system-ui,sans-serif;color:var(--tinta)}
 .chips-rubros{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips-rubros a{padding:7px 14px;border-radius:999px;
 border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font:600 .9rem system-ui,sans-serif}
 .chips-rubros a:hover{background:rgba(255,255,255,.12)}
@@ -480,7 +481,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 09/11/2026 a las 14:53 (hora argentina).</p>
+        <p>Actualizado el 09/11/2026 a las 15:12 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/ofertas/">Ofertas</a><a href="/productos/">Productos</a><a href="/viajes/vuelos/">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/">Mercado Libre</a><a href="/servicios/">Servicios</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
@@ -549,7 +550,12 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         .sort(function(a,b){return b.n-a.n||b.p-a.p;});}
       else todos.sort(function(a,b){return b.p-a.p;});
       if(parecido&&todos.length)titulo.textContent='No encontramos «'+q.trim()+'» exacto: esto es lo más parecido';
-      todos.slice(0,24).forEach(function(x,i){grilla.appendChild(tarjeta(x,parecido?i+1:i));});
+      /* 9-nov (José): El Gadget (y viajes) primero; Mercado Libre como segunda búsqueda, en su bloque */
+      var prim=todos.filter(function(x){return x.tienda!=='ml';}),seg=todos.filter(function(x){return x.tienda==='ml';});
+      if(!prim.length){prim=seg;seg=[];}
+      prim.slice(0,24).forEach(function(x,i){grilla.appendChild(tarjeta(x,parecido?i+1:i));});
+      if(seg.length){grilla.appendChild(el('li','res-grupo','También en Mercado Libre'));
+        seg.slice(0,12).forEach(function(x){grilla.appendChild(tarjeta(x,1));});}
       vacio.hidden=todos.length>0;
       if(!todos.length)ml.href='https://listado.mercadolibre.com.ar/'+encodeURIComponent(norm(q).trim().replace(/[^a-z0-9]+/g,'-'));
       if(mover)zona.scrollIntoView({behavior:'smooth',block:'start'});
