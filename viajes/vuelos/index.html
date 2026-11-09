@@ -343,6 +343,26 @@ border-radius:999px;padding:6px 12px;text-decoration:none}
 .desde-titulo{font-size:1.1rem;margin:18px 0 10px;scroll-margin-top:90px}
 .rutas{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));margin:0;padding:0;list-style:none}
 .ruta{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:18px 18px 12px}
+.g-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin:0 0 26px;padding:0;list-style:none}
+.g-tarjeta{display:flex;flex-direction:column;gap:6px;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:14px}
+.g-tarjeta img{width:100%;height:auto;border-radius:12px;aspect-ratio:1}
+.g-tarjeta h3{font-size:1rem;line-height:1.3;margin:0}.g-tarjeta .tienda{margin:4px 0 0}
+.g-precio{margin:2px 0 0;font:700 1.25rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.g-precio span{font:400 .8rem system-ui,sans-serif;color:var(--gris)}
+.g-bajo{margin:0;color:var(--verde);font-weight:600;font-size:.9rem}.g-codigo{margin:0;font-size:.9rem;color:#3a4456}
+.g-tarjeta .boton{margin-top:auto;align-self:stretch;text-align:center}.g-revisado{margin:0;font-size:.78rem;color:var(--gris)}
+.g-cat{font-size:1.25rem;margin:8px 0 12px;scroll-margin-top:90px}
+.ver-guia{display:inline-block;margin-top:8px;font:600 .88rem system-ui,sans-serif;color:var(--tinta)}
+.guias-viaje{margin:0 0 26px}.guias-viaje>h2{font-size:1.35rem;margin:0 0 10px}
+.guia{max-width:52em}.guia>section{margin:0 0 26px}.guia h2{font-size:1.3rem;margin:0 0 8px}
+.guia p,.guia li{color:#3a4456}.guia ul{margin:0;padding-left:20px}.guia li+li{margin-top:6px}
+.hacer-lista{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin:0;padding:0;list-style:none}
+.guia .hacer-lista{padding:0}.hacer-lista li{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);
+padding:16px 18px;margin:0}.hacer-lista h3{font-size:1.05rem;margin:0 0 4px}.hacer-lista p{margin:0}
+.para-viaje{display:grid;gap:10px;margin:0;padding:0;list-style:none}.guia .para-viaje{padding:0}
+.para-viaje a{display:block;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:14px 18px;
+color:inherit;text-decoration:none}.para-viaje a:hover{border-color:var(--tinta)}.para-viaje b{color:var(--tinta)}
+.fuentes{font-size:.88rem}.fuentes ol{margin:6px 0 0;padding-left:20px}.fuentes a{color:var(--gris)}
 .ruta h3{font-size:1.15rem;margin:0}.ruta .desde{margin:2px 0 10px;color:var(--gris);font-size:.92rem}
 .ruta .desde b{font:700 1.25rem Poppins,system-ui,sans-serif;color:var(--tinta)}
 .vuelos-lista{margin:0;padding:0;list-style:none}
@@ -436,7 +456,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
   <header class="cabecera">
     <div class="envoltura cabecera-fila">
       <a class="marca" href="/" aria-label="El Datazo, inicio"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M3 9.5 L27 2.5 L38 11 L33 24 L9 28.5 Z" fill="#ffd21f" stroke="#ffd21f" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="16" r="2.6" fill="#16233f"/><path d="M24 6.5 L18.5 16.5 L23 16 L20.5 24 L27 13 L22.5 13.5 Z" fill="#16233f"/></svg><span class="marca-nombre">El <span>Datazo</span></span></a>
-      <nav class="menu" aria-label="Secciones"><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/" aria-current="page">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
+      <nav class="menu" aria-label="Secciones"><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/vuelos/" aria-current="page">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
     </div>
   </header>
   <main id="contenido">
@@ -456,17 +476,13 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
       <section class="pasajes" aria-labelledby="pasajes-titulo">
         <h2 id="pasajes-titulo">Pasajes baratos</h2>
         <p class="nota">Ida y vuelta por persona, en pesos. Son los más baratos que vieron viajeros en Aviasales en las
-        últimas 48 horas; revisado el 08/11 a las 18:17. Pueden cambiar o agotarse. Revisá si el precio
+        últimas 48 horas; revisado el 09/11 a las 08:11. Pueden cambiar o agotarse. Revisá si el precio
         final incluye el 30% de percepción.</p>
         <nav class="origenes" aria-label="Desde dónde"><a href="#desde-BUE">Desde Buenos Aires</a><a href="#desde-COR">Desde Córdoba</a><a href="#desde-MDZ">Desde Mendoza</a></nav>
         <h3 class="desde-titulo" id="desde-BUE">Desde Buenos Aires</h3>
         <ul class="rutas" role="list">
-          <li class="ruta"><h3>Iguazú</h3><p class="desde">desde <b>$88.097</b></p>
+          <li class="ruta"><h3>Iguazú</h3><p class="desde">desde <b>$89.656</b></p>
             <ol class="vuelos-lista">
-              <li><span><span class="fechas">26/11 → 01/12</span>
-                <span class="det">Directo · JetSMART</span></span>
-                <a href="https://www.aviasales.com/search/BUE2611IGR01121?t=JA17956960801795702860000113EZEIGR17961639001796171160000121IGREZE_4f6d62a957130e7a9ff72d7df1e9f2c5_4674&amp;search_date=06112026&amp;expected_price_uuid=01a1b25a-368b-8040-2b13-9b8e31d2f350&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=TW2rGT0Jl33nTDRsfjNOoA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=88097&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-IGR"
-                   aria-label="Iguazú, 26/11, $88.097">$88.097</a></li>
               <li><span><span class="fechas">26/11 → 04/12</span>
                 <span class="det">Directo · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE2611IGR04121?t=JA17957211001795727880000113AEPIGR17964199801796427240000121IGREZE_66611392700173181b79a2fbb454083d_4751&amp;search_date=06112026&amp;expected_price_uuid=01a1b121-ff54-8040-6a09-4cfac9f007c0&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=UQPELOQkxsovHJMAoXR9pQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=89656&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-IGR"
@@ -475,6 +491,10 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">Directo · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE1201IGR13011?t=JA17997825001799789280000113EZEIGR17998766401799883900000121IGRAEP_142af9a4f2f678a64f7c13a925471562_4840&amp;search_date=07112026&amp;expected_price_uuid=01a1b431-4424-8030-ebb7-962bdb1297d7&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=fVEN0HTYQ6sUupgbb6fR0A&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=91263&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-IGR"
                    aria-label="Iguazú, 12/01, $91.263">$91.263</a></li>
+              <li><span><span class="fechas">22/12 → 24/12</span>
+                <span class="det">Directo · JetSMART</span></span>
+                <a href="https://www.aviasales.com/search/BUE2212IGR24121?t=JA17979210001797927480000108AEPIGR17981530201798160280000121IGREZE_8457115076adff5c35148708cdd99284_4920&amp;search_date=06112026&amp;expected_price_uuid=01a1b277-b785-8040-23a7-d86a197cc869&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=xWP9EZ46c9AqxkNb6OpXVA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=92734&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-IGR"
+                   aria-label="Iguazú, 22/12, $92.734">$92.734</a></li>
             </ol></li>
           <li class="ruta"><h3>Bariloche</h3><p class="desde">desde <b>$140.596</b></p>
             <ol class="vuelos-lista">
@@ -486,17 +506,13 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">Directo · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE0912BRC16121?t=JA17968035001796811960000141EZEBRC17974573801797465060000128BRCEZE_0dda9f53dc2c1fdb0293b232a11d7f53_7862&amp;search_date=03112026&amp;expected_price_uuid=01a1a3d4-5b45-8040-6161-d05d323602d7&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=UYeRlt_bZBAkEEzwOr4-Vg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=149343&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-BRC"
                    aria-label="Bariloche, 09/12, $149.343">$149.343</a></li>
-              <li><span><span class="fechas">10/12 → 17/12</span>
+              <li><span><span class="fechas">08/12 → 15/12</span>
                 <span class="det">Directo · JetSMART</span></span>
-                <a href="https://www.aviasales.com/search/BUE1012BRC17121?t=JA17969316001796940060000141AEPBRC17975370001797544620000127BRCAEP_902adb50f982c0de2178d31f96b9226c_8076&amp;search_date=05112026&amp;expected_price_uuid=01a1ae06-79e3-8030-ae7a-b2756ceba24a&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=azAvCGl-b3Yq6xhf1H_Y_w&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=153081&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-BRC"
-                   aria-label="Bariloche, 10/12, $153.081">$153.081</a></li>
+                <a href="https://www.aviasales.com/search/BUE0812BRC15121?t=JA17967539401796762400000141EZEBRC17973732601797380940000128BRCEZE_2623f42c0eb928df0f89d173781ba1c4_8448&amp;search_date=03112026&amp;expected_price_uuid=01a1a3d4-dd41-8040-af03-b3cb4d3e625e&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=NGqTOl1B8BpYGApGTSLXlw&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=160474&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-BRC"
+                   aria-label="Bariloche, 08/12, $160.474">$160.474</a></li>
             </ol></li>
-          <li class="ruta"><h3>Ushuaia</h3><p class="desde">desde <b>$145.182</b></p>
+          <li class="ruta"><h3>Ushuaia</h3><p class="desde">desde <b>$146.773</b></p>
             <ol class="vuelos-lista">
-              <li><span><span class="fechas">24/11 → 01/12</span>
-                <span class="det">Directo · JetSMART</span></span>
-                <a href="https://www.aviasales.com/search/BUE2411USH01121?t=JA17954944801795507560000218EZEUSH17961619201796174400000208USHEZE_81633db4443581fbfb0bd2fc55aa24b3_7585&amp;search_date=02112026&amp;expected_price_uuid=01a19a92-3491-8030-eac5-3ec8d0627a6e&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ev47kZB8bTw1TONrv99J_A&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=145182&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-USH"
-                   aria-label="Ushuaia, 24/11, $145.182">$145.182</a></li>
               <li><span><span class="fechas">27/11 → 01/12</span>
                 <span class="det">Directo · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE2711USH01121?t=JA17957568001795770120000222EZEUSH17961619201796174400000208USHEZE_99f44999b8f9943492954a64f2683def_7690&amp;search_date=03112026&amp;expected_price_uuid=01a19f39-d1ea-8040-aa33-4844f22907fc&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=KTvh-2XZK-7AqSx5jdMvLA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=146773&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-USH"
@@ -505,6 +521,10 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">Directo · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE2601USH29011?t=JA18009792001800992520000222EZEUSH18012565201801269000000208USHEZE_85ac703fbf188697f7f48da5edbed498_7928&amp;search_date=05112026&amp;expected_price_uuid=01a1a912-3cc4-8040-a33f-915fda32aa86&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=rOH1ioNi5VVIlXVtadOTFg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=149735&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-USH"
                    aria-label="Ushuaia, 26/01, $149.735">$149.735</a></li>
+              <li><span><span class="fechas">13/11 → 14/11</span>
+                <span class="det">Directo · JetSMART</span></span>
+                <a href="https://www.aviasales.com/search/BUE1311USH14111?t=JA17945883001794601620000222EZEUSH17946895201794702000000208USHAEP_28ade17abddc72779fa0ae92b124f185_10501&amp;search_date=02112026&amp;expected_price_uuid=01a19e08-f5e3-8031-6b65-425c66e7a872&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=kpbtTbda0NvUCRighrNJrA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=199698&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-USH"
+                   aria-label="Ushuaia, 13/11, $199.698">$199.698</a></li>
             </ol></li>
           <li class="ruta"><h3>Santiago de Chile</h3><p class="desde">desde <b>$202.382</b></p>
             <ol class="vuelos-lista">
@@ -576,17 +596,13 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">2 escalas · JetSMART</span></span>
                 <a href="https://www.aviasales.com/search/BUE1601CUN26011?t=Y418001185001800219420001802EZELIMMEXCUN18009501601801019700001039CUNMEXLIMEZE_8d5436dcce7f6051ccf625c8aa15921a_69307&amp;search_date=04112026&amp;expected_price_uuid=01a1a6a7-0e89-8031-6f5b-4b68ea78945c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=wfcBicJ50oCQMZP8axX-9A&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1310383&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-CUN"
                    aria-label="Cancún, 16/01, $1.310.383">$1.310.383</a></li>
-              <li><span><span class="fechas">17/01 → 25/01</span>
-                <span class="det">2 escalas · JetSMART</span></span>
-                <a href="https://www.aviasales.com/search/BUE1701CUN25011?t=Y418001638001800305820002487AEPLIMMEXCUN18009095401801019700001716CUNMEXLIMEZE_b4ac9291a886f09c0ae85357dd549e99_70816&amp;search_date=04112026&amp;expected_price_uuid=01a1a6a7-0aee-8030-2f78-862e3311a4b9&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=1rRdtVHHEGVXSrhGF78SMg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1338913&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-CUN"
-                   aria-label="Cancún, 17/01, $1.338.913">$1.338.913</a></li>
+              <li><span><span class="fechas">01/12 → 06/12</span>
+                <span class="det">1 escala · Avianca</span></span>
+                <a href="https://www.aviasales.com/search/BUE0112CUN06121?t=CM17961087001796144400000715AEPBOGCUN17965413001796609400001015CUNPTYEZE_2932ab43872f15462243a3ec74a4a3b4_70073&amp;search_date=08112026&amp;expected_price_uuid=01a1bd90-7229-8040-6b02-6ef18ef52b3d&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=bu618-LEtRzm9kkFY3UTIA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1321253&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-CUN"
+                   aria-label="Cancún, 01/12, $1.321.253">$1.321.253</a></li>
             </ol></li>
-          <li class="ruta"><h3>Madrid</h3><p class="desde">desde <b>$1.321.454</b></p>
+          <li class="ruta"><h3>Madrid</h3><p class="desde">desde <b>$1.340.783</b></p>
             <ol class="vuelos-lista">
-              <li><span><span class="fechas">02/12 → 31/12</span>
-                <span class="det">1 escala · LATAM</span></span>
-                <a href="https://www.aviasales.com/search/BUE0212MAD31121?t=LA17961960001796315700001755EZELIMMAD17986776001798742100001315MADLIMEZE_2bd3727a36794cd5b1eb94c4a0744a6e_69743&amp;search_date=01112026&amp;expected_price_uuid=01a1993d-8e75-8031-6de1-c69020718326&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=i3g1gucQ-m_-tVzc-Q4DcA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1321454&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MAD"
-                   aria-label="Madrid, 02/12, $1.321.454">$1.321.454</a></li>
               <li><span><span class="fechas">18/11 → 30/11</span>
                 <span class="det">1 escala · Gol</span></span>
                 <a href="https://www.aviasales.com/search/BUE1811MAD30111?t=CA17949924001795127700002015AEPGRUMAD17960778001796118000000910MADGRUAEP_35ee825cad33608a1cf0814689d8b23a_70615&amp;search_date=03112026&amp;expected_price_uuid=01a1a2e1-f7ed-8040-2b58-c51f4ff03959&amp;static_fare_key=TY%7CP1%7CH1%7CL1_2_46%7CCH0%7CR0%7CTBC1&amp;itinerary_key=PzUz9j4HyMGo_5m6cwuiJg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1340783&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MAD"
@@ -595,13 +611,17 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">1 escala · Gol</span></span>
                 <a href="https://www.aviasales.com/search/BUE2511MAD30111?t=CA17956305001795732500001460AEPGRUMAD17960778001796145600001370MADGRUAEP_8fc3c70968bdaec93946cc6cb70d1d64_72199&amp;search_date=06112026&amp;expected_price_uuid=01a1b25c-3d19-8040-2e17-70b511ad84b4&amp;static_fare_key=TY%7CP1%7CH1%7CL1_2_0%7CCH0%7CR0%7CTBC1&amp;itinerary_key=V57kSLsH2vdTZ9d6Dsx6cw&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1360830&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MAD"
                    aria-label="Madrid, 25/11, $1.360.830">$1.360.830</a></li>
+              <li><span><span class="fechas">18/11 → 29/11</span>
+                <span class="det">1 escala · Gol</span></span>
+                <a href="https://www.aviasales.com/search/BUE1811MAD29111?t=CA17950257001795127700001460AEPGRUMAD17959914001796059200001370MADGRUAEP_ba9ad149876e5b9865c57eaf458217c8_74582&amp;search_date=05112026&amp;expected_price_uuid=01a1ad31-cee4-8040-ad96-4b4de179a179&amp;static_fare_key=TY%7CP1%7CH1%7CL1_2_46%7CCH0%7CR0%7CTBC1&amp;itinerary_key=CMNqr1Fwk0HMbvM2w5aZjQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1413694&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MAD"
+                   aria-label="Madrid, 18/11, $1.413.694">$1.413.694</a></li>
             </ol></li>
-          <li class="ruta"><h3>Nueva York</h3><p class="desde">desde <b>$1.396.652</b></p>
+          <li class="ruta"><h3>Nueva York</h3><p class="desde">desde <b>$1.396.307</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">23/12 → 02/01</span>
                 <span class="det">Directo · LATAM</span></span>
-                <a href="https://www.aviasales.com/search/BUE2312NYC02011?t=LA17980563001798088880000663EZEJFK17989272001798973700000655JFKEZE_15d207c8f8dc63deaa1302dbe78b98ee_74017&amp;search_date=08112026&amp;expected_price_uuid=01a1bb06-5007-8040-2f41-43d2d0f43712&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=8dX87KO2LJXK-va6YbFrAA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1396652&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-NYC"
-                   aria-label="Nueva York, 23/12, $1.396.652">$1.396.652</a></li>
+                <a href="https://www.aviasales.com/search/BUE2312NYC02011?t=LA17980563001798088880000663EZEJFK17989272001798973700000655JFKEZE_15d207c8f8dc63deaa1302dbe78b98ee_74017&amp;search_date=08112026&amp;expected_price_uuid=01a1bb06-5007-8040-2f41-43d2d0f43712&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=8dX87KO2LJXK-va6YbFrAA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1396307&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-NYC"
+                   aria-label="Nueva York, 23/12, $1.396.307">$1.396.307</a></li>
               <li><span><span class="fechas">01/12 → 08/12</span>
                 <span class="det">Directo · American Airlines</span></span>
                 <a href="https://www.aviasales.com/search/BUE0112NYC08121?t=AA17961579001796189700000650EZEJFK17967455401796800800000801JFKMIAEZE_135ba0809e2447ae1601ed7fd9edd2a6_77005&amp;search_date=05112026&amp;expected_price_uuid=01a1abc4-10db-8040-2091-12e3d64e8b51&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=ADKm2jxxG-KCpuXc5cxh_g&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1457438&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-NYC"
@@ -638,8 +658,8 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                    aria-label="Barcelona, 31/01, $1.745.928">$1.745.928</a></li>
               <li><span><span class="fechas">29/12 → 22/01</span>
                 <span class="det">1 escala · Avianca</span></span>
-                <a href="https://www.aviasales.com/search/BUE2912BCN22011?t=AV17985279001798637400001585AEPBOGBCN18006252001800682800001200BCNBOGAEP_7e9b46fc1fa6736c94ce3774740df4e6_112047&amp;search_date=07112026&amp;expected_price_uuid=01a1b849-895b-8030-e187-7b3ebc0df716&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=d5hFY8UfMbb5O5n3FIu-5A&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=2112751&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-BCN"
-                   aria-label="Barcelona, 29/12, $2.112.751">$2.112.751</a></li>
+                <a href="https://www.aviasales.com/search/BUE2912BCN22011?t=AV17985279001798637400001585AEPBOGBCN18006252001800682800001200BCNBOGAEP_7e9b46fc1fa6736c94ce3774740df4e6_112038&amp;search_date=08112026&amp;expected_price_uuid=01a1bd75-b507-8031-6407-60d1a1f4d335&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=d5hFY8UfMbb5O5n3FIu-5A&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=2111861&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-BCN"
+                   aria-label="Barcelona, 29/12, $2.111.861">$2.111.861</a></li>
             </ol></li>
         </ul>
         <h3 class="desde-titulo" id="desde-COR">Desde Córdoba</h3>
@@ -673,6 +693,21 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
                 <span class="det">1 escala · LATAM</span></span>
                 <a href="https://www.aviasales.com/search/COR1011RIO17111?t=LA17943315001794417900001440CORGRUSDU17948904001794932700000705GIGGRUCOR_31b58dad6889ac09520bcb38ef2f4635_37309&amp;search_date=06112026&amp;expected_price_uuid=01a1b26d-1e78-8040-a3e9-9dd052a7fd8b&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=QaGhLz1D0ghBy2GhadCh5w&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=703212&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="COR-RIO"
                    aria-label="Río de Janeiro, 10/11, $703.212">$703.212</a></li>
+            </ol></li>
+          <li class="ruta"><h3>Barcelona</h3><p class="desde">desde <b>$2.095.530</b></p>
+            <ol class="vuelos-lista">
+              <li><span><span class="fechas">19/12 → 01/01</span>
+                <span class="det">1 escala · LATAM</span></span>
+                <a href="https://www.aviasales.com/search/COR1912BCN01011?t=LA17976492001797758400001580CORGRUBCN17987997001798858800001225BCNMADLIMCOR_2893d29969e7de792c85a5a39d144633_111137&amp;search_date=08112026&amp;expected_price_uuid=01a1bd8a-d84a-8030-2527-10afe4926be1&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=d2PDhWEuY7SoAZLQPSq_YQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=2095530&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="COR-BCN"
+                   aria-label="Barcelona, 19/12, $2.095.530">$2.095.530</a></li>
+              <li><span><span class="fechas">20/12 → 03/01</span>
+                <span class="det">2 escalas · LATAM</span></span>
+                <a href="https://www.aviasales.com/search/COR2012BCN03011?t=LA17977959001797931200002015CORSCLGRUBCN17990061001799128200002275BCNMADLIMCOR_afbd9b113745990958108f3d2f3b81ae_117156&amp;search_date=08112026&amp;expected_price_uuid=01a1bd84-6ccb-8030-65bf-960215c84500&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=Sx9hxOGesSC1OiUy6kLCyg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=2209020&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="COR-BCN"
+                   aria-label="Barcelona, 20/12, $2.209.020">$2.209.020</a></li>
+              <li><span><span class="fechas">23/12 → 06/01</span>
+                <span class="det">3 escalas · JetSMART</span></span>
+                <a href="https://www.aviasales.com/search/COR2312BCN06011?t=AR17980663801798205400002077CORAEPSCLBOGBCN17992728001799396400002300BCNFCOMADEZECOR_548690a2b653db3d2afd71af23e4fec5_118618&amp;search_date=08112026&amp;expected_price_uuid=01a1bd85-4cf0-8030-687a-61b9387c7fbf&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=x0QXkh6F-Wz-D_uuEeGi0w&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=2236587&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="COR-BCN"
+                   aria-label="Barcelona, 23/12, $2.236.587">$2.236.587</a></li>
             </ol></li>
         </ul>
         <h3 class="desde-titulo" id="desde-MDZ">Desde Mendoza</h3>
@@ -727,9 +762,9 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 09/11/2026 a las 07:31 (hora argentina).</p>
+        <p>Actualizado el 09/11/2026 a las 08:30 (hora argentina).</p>
       </div>
-      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
+      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/vuelos/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
     </div>
   </footer>
