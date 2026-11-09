@@ -26,6 +26,15 @@
       document.head.appendChild(script);
   })();
   </script>
+  <script>
+  (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.type = "module";
+      script.src = "https://tpembd.com/wl_web/main.js?wl_id=24386";
+      document.head.appendChild(script);
+  })();
+  </script>
   <link rel="preload" href="/fuentes/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
   <style>
 @font-face{font-family:Poppins;src:url('/fuentes/Poppins-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
@@ -323,6 +332,9 @@ a.rubro:hover{border-color:var(--tinta)}
 border-radius:var(--radio);padding:22px}
 .marca-viaje h3{font-size:1.2rem}.marca-viaje p{margin:0;color:#3a4456}
 .marca-viaje .boton{align-self:flex-start;margin-top:auto}
+.buscador-vuelos{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:20px 22px;margin:0 0 26px}
+.buscador-vuelos h2{font-size:1.35rem;margin:0 0 4px}.buscador-vuelos .nota{margin:0 0 12px}
+#tpwl-search{min-height:64px}
 .pasajes{margin:0 0 26px}.pasajes>h2{font-size:1.35rem;margin:0 0 6px}
 .pasajes .nota{margin:0 0 14px}
 .origenes{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
@@ -435,11 +447,17 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
     <section class="seccion envoltura">
       <nav class="rubros-nav" aria-label="Rubros de viajes"><a href="/viajes/">Todo</a><a href="/viajes/vuelos/" aria-current="page">Vuelos</a><a href="/viajes/esim/">eSIM</a><a href="/viajes/traslados/">Traslados</a><a href="/viajes/autos/">Autos</a><a href="/viajes/entradas/">Entradas</a><a href="/viajes/excursiones/">Excursiones</a><a href="/viajes/valijas/">Valijas</a><a href="/viajes/reclamos/">Reclamos</a><a href="/viajes/hoteles/" class="pronto">Hoteles</a></nav>
       <div style="margin-top:18px">
+      <section class="buscador-vuelos" aria-labelledby="buscador-titulo">
+        <h2 id="buscador-titulo">Buscá tu vuelo</h2>
+        <p class="nota">Compara aerolíneas y agencias. Revisá si el precio final incluye el 30% de percepción.</p>
+        <div id="tpwl-search"></div>
+        <div id="tpwl-tickets"></div>
+      </section>
       <section class="pasajes" aria-labelledby="pasajes-titulo">
         <h2 id="pasajes-titulo">Pasajes baratos</h2>
         <p class="nota">Ida y vuelta por persona, en pesos. Son los más baratos que vieron viajeros en Aviasales en las
-        últimas 48 horas; revisado el 08/11 a las 18:17. Pueden cambiar o agotarse: el precio final, con
-        impuestos y cargos, lo ves en Aviasales antes de pagar.</p>
+        últimas 48 horas; revisado el 08/11 a las 18:17. Pueden cambiar o agotarse. Revisá si el precio
+        final incluye el 30% de percepción.</p>
         <nav class="origenes" aria-label="Desde dónde"><a href="#desde-BUE">Desde Buenos Aires</a><a href="#desde-COR">Desde Córdoba</a><a href="#desde-MDZ">Desde Mendoza</a></nav>
         <h3 class="desde-titulo" id="desde-BUE">Desde Buenos Aires</h3>
         <ul class="rutas" role="list">
@@ -709,7 +727,7 @@ border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 09/11/2026 a las 06:50 (hora argentina).</p>
+        <p>Actualizado el 09/11/2026 a las 07:17 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/mercado-libre/">Mercado Libre</a><a href="/tiendas/">Tiendas</a><a href="/servicios/">Servicios</a><a href="/viajes/">Viajes</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
