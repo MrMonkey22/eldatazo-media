@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vuelos · Viajes · El Datazo</title>
-  <meta name="description" content="Buscadores que combinan aerolíneas distintas en un mismo viaje.">
+  <title>Pasajes baratos desde Argentina: los precios que vimos hoy · El Datazo</title>
+  <meta name="description" content="Pasajes de ida y vuelta desde Buenos Aires, Córdoba y Mendoza con el precio más barato que vimos hoy, por ruta y por mes. Revisado todos los días.">
   <meta name="theme-color" content="#16233f">
   <link rel="icon" href="/logo.png">
   <link rel="canonical" href="https://eldatazo.com.ar/viajes/vuelos/">
@@ -12,8 +12,8 @@
   <meta property="og:site_name" content="El Datazo">
   <meta property="og:locale" content="es_AR">
   <meta property="og:url" content="https://eldatazo.com.ar/viajes/vuelos/">
-  <meta property="og:title" content="Vuelos · Viajes · El Datazo">
-  <meta property="og:description" content="Buscadores que combinan aerolíneas distintas en un mismo viaje.">
+  <meta property="og:title" content="Pasajes baratos desde Argentina: los precios que vimos hoy · El Datazo">
+  <meta property="og:description" content="Pasajes de ida y vuelta desde Buenos Aires, Córdoba y Mendoza con el precio más barato que vimos hoy, por ruta y por mes. Revisado todos los días.">
   <meta property="og:image" content="https://eldatazo.com.ar/logo.png">
   <meta name="twitter:card" content="summary">
   <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c2648c131b9044528376ec48076fb21b"}'></script>
@@ -478,6 +478,23 @@ align-items:center;justify-content:center;flex:none}
 @media (prefers-reduced-motion:reduce){.mc-ondas i{animation:none;height:70%}}
 @media (max-width:1180px){.mini-cancion{padding:4px}.mc-texto{display:none}.mini-cancion.sonando{padding-right:10px}}
 @media (max-width:820px){.mini-cancion{margin-left:auto}}
+
+.ruta > section{margin-top:26px}
+.ruta-acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tabla-ruta{overflow-x:auto}
+.tabla-ruta table{width:100%;border-collapse:collapse;background:var(--blanco);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)}
+.tabla-ruta th,.tabla-ruta td{padding:11px 12px;text-align:left;border-top:1px solid var(--linea);white-space:nowrap}
+.tabla-ruta thead th{background:var(--tinta);color:var(--blanco);border-top:0;font-size:.85rem}
+.tabla-ruta td a{font-weight:700;color:var(--tinta);background:var(--sol);border-radius:8px;padding:5px 10px;text-decoration:none}
+.chispa{color:var(--tinta);display:block;margin-top:8px;max-width:100%}
+.preguntas h3{font-size:1.02rem;margin:18px 0 4px}
+.preguntas p{margin:0}
+.otras-rutas{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.otras-rutas li{background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:6px 12px;font-size:.9rem}
+.rutas h3 a{color:inherit;text-decoration:none}.rutas h3 a:hover{text-decoration:underline}
+.ruta-acciones .boton.oscuro{background:transparent;color:var(--blanco);box-shadow:inset 0 0 0 2px rgba(255,255,255,.45)}
+@media (max-width:600px){.tabla-ruta th:nth-child(3),.tabla-ruta td:nth-child(3),.tabla-ruta th:nth-child(4),.tabla-ruta td:nth-child(4){display:none}
+.tabla-ruta th,.tabla-ruta td{padding:11px 10px}}
 </style>
 </head>
 <body>
@@ -510,7 +527,7 @@ align-items:center;justify-content:center;flex:none}
         <nav class="origenes" aria-label="Desde dónde"><a href="#desde-BUE">Desde Buenos Aires</a><a href="#desde-COR">Desde Córdoba</a><a href="#desde-MDZ">Desde Mendoza</a></nav>
         <h3 class="desde-titulo" id="desde-BUE">Desde Buenos Aires</h3>
         <ul class="rutas" role="list">
-          <li class="ruta"><h3>Iguazú</h3><p class="desde">desde <b>$89.656</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-iguazu/" title="Pasajes de Buenos Aires a Iguazú">Iguazú</a></h3><p class="desde">desde <b>$89.656</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">26/11 → 04/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -526,7 +543,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Iguazú, 22/12, $92.734">$92.734</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/iguazu/">Guía de Cataratas del Iguazú →</a></li>
-          <li class="ruta"><h3>Ushuaia</h3><p class="desde">desde <b>$149.735</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-ushuaia/" title="Pasajes de Buenos Aires a Ushuaia">Ushuaia</a></h3><p class="desde">desde <b>$149.735</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">26/01 → 29/01</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -541,7 +558,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE1311USH15111?t=JA17945472001794560520000222EZEUSH17947725001794785100000210USHEZE_f7c4c72edc9c01cebb8d88e35b03a2ab_11873&amp;search_date=09112026&amp;expected_price_uuid=01a1c21e-6529-8040-a096-eeecfa7bb55f&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=-wr5pB_EfqkW2v2A8z3qQQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=222440&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-USH"
                    aria-label="Ushuaia, 13/11, $222.440">$222.440</a></li>
             </ol></li>
-          <li class="ruta"><h3>Bariloche</h3><p class="desde">desde <b>$172.352</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-bariloche/" title="Pasajes de Buenos Aires a Bariloche">Bariloche</a></h3><p class="desde">desde <b>$172.352</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">26/11 → 02/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -557,7 +574,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Bariloche, 11/12, $184.612">$184.612</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/bariloche/">Guía de Bariloche →</a></li>
-          <li class="ruta"><h3>Santiago de Chile</h3><p class="desde">desde <b>$202.382</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-santiago-de-chile/" title="Pasajes de Buenos Aires a Santiago de Chile">Santiago de Chile</a></h3><p class="desde">desde <b>$202.382</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">28/11 → 02/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -572,7 +589,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE2601SCL03021?t=JA18009423001800950820000142AEPSCL18016302001801637700000125SCLEZE_7e97b412cac0bdfcea155d424026d0df_13639&amp;search_date=05112026&amp;expected_price_uuid=01a1ae08-985f-8040-a2e6-6843414b57e3&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=NfWSfuiZfSk1wGMVXKuz3Q&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=258528&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-SCL"
                    aria-label="Santiago de Chile, 26/01, $258.528">$258.528</a></li>
             </ol></li>
-          <li class="ruta"><h3>Florianópolis</h3><p class="desde">desde <b>$318.109</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-florianopolis/" title="Pasajes de Buenos Aires a Florianópolis">Florianópolis</a></h3><p class="desde">desde <b>$318.109</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">11/12 → 16/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -588,7 +605,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Florianópolis, 09/12, $343.385">$343.385</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/florianopolis/">Guía de Florianópolis →</a></li>
-          <li class="ruta"><h3>Río de Janeiro</h3><p class="desde">desde <b>$352.964</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-rio-de-janeiro/" title="Pasajes de Buenos Aires a Río de Janeiro">Río de Janeiro</a></h3><p class="desde">desde <b>$352.964</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">25/11 → 03/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -604,7 +621,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Río de Janeiro, 07/12, $390.021">$390.021</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/rio-de-janeiro/">Guía de Río de Janeiro →</a></li>
-          <li class="ruta"><h3>Miami</h3><p class="desde">desde <b>$970.577</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-miami/" title="Pasajes de Buenos Aires a Miami">Miami</a></h3><p class="desde">desde <b>$970.577</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">17/11 → 26/11</span>
                 <span class="det">2 escalas · Sky Airline</span></span>
@@ -619,7 +636,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE1211MIA18111?t=DM17944842001794553800001280AEPSCLLIMMIA17950203001795070100000710MIAPUJEZE_e8e8cbf53bb7b6d834573cc7ca4f3353_54153&amp;search_date=07112026&amp;expected_price_uuid=01a1b5b4-8c1c-8030-608a-143c3543401c&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=6a-DOanJhrK4ULDWQ-kXhw&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1021105&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MIA"
                    aria-label="Miami, 12/11, $1.021.105">$1.021.105</a></li>
             </ol></li>
-          <li class="ruta"><h3>Cancún</h3><p class="desde">desde <b>$1.055.461</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-cancun/" title="Pasajes de Buenos Aires a Cancún">Cancún</a></h3><p class="desde">desde <b>$1.055.461</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">10/12 → 28/12</span>
                 <span class="det">2 escalas · LATAM</span></span>
@@ -634,7 +651,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE0112CUN06121?t=CM17961087001796144400000715AEPBOGCUN17965413001796609400001015CUNPTYEZE_2932ab43872f15462243a3ec74a4a3b4_70073&amp;search_date=08112026&amp;expected_price_uuid=01a1bd90-7229-8040-6b02-6ef18ef52b3d&amp;static_fare_key=TY%7CP1%7CH1%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=bu618-LEtRzm9kkFY3UTIA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1321253&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-CUN"
                    aria-label="Cancún, 01/12, $1.321.253">$1.321.253</a></li>
             </ol></li>
-          <li class="ruta"><h3>Madrid</h3><p class="desde">desde <b>$1.340.783</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-madrid/" title="Pasajes de Buenos Aires a Madrid">Madrid</a></h3><p class="desde">desde <b>$1.340.783</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">18/11 → 30/11</span>
                 <span class="det">1 escala · Gol</span></span>
@@ -649,7 +666,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE1811MAD29111?t=CA17950257001795127700001460AEPGRUMAD17959914001796059200001370MADGRUAEP_ba9ad149876e5b9865c57eaf458217c8_74582&amp;search_date=05112026&amp;expected_price_uuid=01a1ad31-cee4-8040-ad96-4b4de179a179&amp;static_fare_key=TY%7CP1%7CH1%7CL1_2_46%7CCH0%7CR0%7CTBC1&amp;itinerary_key=CMNqr1Fwk0HMbvM2w5aZjQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1413694&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-MAD"
                    aria-label="Madrid, 18/11, $1.413.694">$1.413.694</a></li>
             </ol></li>
-          <li class="ruta"><h3>Nueva York</h3><p class="desde">desde <b>$1.396.307</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-nueva-york/" title="Pasajes de Buenos Aires a Nueva York">Nueva York</a></h3><p class="desde">desde <b>$1.396.307</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">23/12 → 02/01</span>
                 <span class="det">Directo · LATAM</span></span>
@@ -664,7 +681,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE2312NYC27121?t=LA17980563001798088880000663EZEJFK17983777201798451400001108JFKMIAEZE_047b10c06354a38e9c1cd1bdf9781ffc_81019&amp;search_date=06112026&amp;expected_price_uuid=01a1ae49-89c0-8040-a8e2-ba4e7cad719c&amp;static_fare_key=TY%7CP0%7CH0%7CL1_1_0%7CCH0%7CR0%7CTBC1&amp;itinerary_key=9WoevdNoqBUa-lMbGW3_oA&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1536447&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-NYC"
                    aria-label="Nueva York, 23/12, $1.536.447">$1.536.447</a></li>
             </ol></li>
-          <li class="ruta"><h3>Roma</h3><p class="desde">desde <b>$1.486.781</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-roma/" title="Pasajes de Buenos Aires a Roma">Roma</a></h3><p class="desde">desde <b>$1.486.781</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">26/11 → 05/12</span>
                 <span class="det">2 escalas · JetSMART</span></span>
@@ -679,7 +696,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/BUE2711ROM26121?t=AF17958192001795905900001205EZECDGFCO17983179001798402800001655FCOCDGEZE_02efc79deafe730e26fa90ff3d9f87e5_101244&amp;search_date=05112026&amp;expected_price_uuid=01a1ad09-deeb-8040-60b6-5ca574c04bc2&amp;static_fare_key=TY%7CP1%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=gXP2jA43CII5BGxx91-4oQ&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1919130&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="BUE-ROM"
                    aria-label="Roma, 27/11, $1.919.130">$1.919.130</a></li>
             </ol></li>
-          <li class="ruta"><h3>Barcelona</h3><p class="desde">desde <b>$1.718.601</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/buenos-aires-barcelona/" title="Pasajes de Buenos Aires a Barcelona">Barcelona</a></h3><p class="desde">desde <b>$1.718.601</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">27/11 → 05/12</span>
                 <span class="det">3 escalas · JetSMART</span></span>
@@ -697,7 +714,7 @@ align-items:center;justify-content:center;flex:none}
         </ul>
         <h3 class="desde-titulo" id="desde-COR">Desde Córdoba</h3>
         <ul class="rutas" role="list">
-          <li class="ruta"><h3>Iguazú</h3><p class="desde">desde <b>$230.301</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/cordoba-iguazu/" title="Pasajes de Córdoba a Iguazú">Iguazú</a></h3><p class="desde">desde <b>$230.301</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">15/11 → 19/11</span>
                 <span class="det">1 escala · Aerolíneas Argentinas</span></span>
@@ -713,7 +730,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Iguazú, 14/11, $236.170">$236.170</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/iguazu/">Guía de Cataratas del Iguazú →</a></li>
-          <li class="ruta"><h3>Río de Janeiro</h3><p class="desde">desde <b>$630.278</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/cordoba-rio-de-janeiro/" title="Pasajes de Córdoba a Río de Janeiro">Río de Janeiro</a></h3><p class="desde">desde <b>$630.278</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">13/11 → 28/11</span>
                 <span class="det">1 escala · LATAM</span></span>
@@ -729,7 +746,7 @@ align-items:center;justify-content:center;flex:none}
                    aria-label="Río de Janeiro, 30/12, $988.409">$988.409</a></li>
             </ol>
             <a class="ver-guia" href="/viajes/destinos/rio-de-janeiro/">Guía de Río de Janeiro →</a></li>
-          <li class="ruta"><h3>Cancún</h3><p class="desde">desde <b>$1.284.325</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/cordoba-cancun/" title="Pasajes de Córdoba a Cancún">Cancún</a></h3><p class="desde">desde <b>$1.284.325</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">02/12 → 09/12</span>
                 <span class="det">1 escala · Arajet</span></span>
@@ -744,7 +761,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/COR1712CUN22121?t=DM17974726201797501600000603CORPTYCUN17979429001797993000000715CUNPUJCOR_d145c29d897750622c6ce0d0aaacba97_76313&amp;search_date=09112026&amp;expected_price_uuid=01a1c07a-ec3a-8040-6b8c-016b359bd1f6&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=9tobqEma1PBzKLT4F-mk3Q&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=1433222&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="COR-CUN"
                    aria-label="Cancún, 17/12, $1.433.222">$1.433.222</a></li>
             </ol></li>
-          <li class="ruta"><h3>Barcelona</h3><p class="desde">desde <b>$2.095.530</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/cordoba-barcelona/" title="Pasajes de Córdoba a Barcelona">Barcelona</a></h3><p class="desde">desde <b>$2.095.530</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">19/12 → 01/01</span>
                 <span class="det">1 escala · LATAM</span></span>
@@ -762,7 +779,7 @@ align-items:center;justify-content:center;flex:none}
         </ul>
         <h3 class="desde-titulo" id="desde-MDZ">Desde Mendoza</h3>
         <ul class="rutas" role="list">
-          <li class="ruta"><h3>Santiago de Chile</h3><p class="desde">desde <b>$120.555</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/mendoza-santiago-de-chile/" title="Pasajes de Mendoza a Santiago de Chile">Santiago de Chile</a></h3><p class="desde">desde <b>$120.555</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">19/12 → 25/12</span>
                 <span class="det">Directo · Sky Airline</span></span>
@@ -777,7 +794,7 @@ align-items:center;justify-content:center;flex:none}
                 <a href="https://www.aviasales.com/search/MDZ0912SCL16121?t=H217968320001796835720000062MDZSCL17974299001797433800000065SCLMDZ_b5baf5d0f8f53e9b1030def39254719b_13846&amp;search_date=07112026&amp;expected_price_uuid=01a1b860-6a07-8030-e585-c130bf9c5cf3&amp;static_fare_key=TY%7CP0%7CH0%7CL0%7CCH0%7CR0%7CTBC0&amp;itinerary_key=i6-RDZSSftOiSIN1Ypi4zg&amp;expected_price_source=share&amp;expected_price_currency=ars&amp;expected_price=261079&amp;marker=802039" target="_blank" rel="sponsored noopener" data-pasaje="MDZ-SCL"
                    aria-label="Santiago de Chile, 09/12, $261.079">$261.079</a></li>
             </ol></li>
-          <li class="ruta"><h3>Bariloche</h3><p class="desde">desde <b>$393.712</b></p>
+          <li class="ruta"><h3><a href="/viajes/vuelos/mendoza-bariloche/" title="Pasajes de Mendoza a Bariloche">Bariloche</a></h3><p class="desde">desde <b>$393.712</b></p>
             <ol class="vuelos-lista">
               <li><span><span class="fechas">08/12 → 09/12</span>
                 <span class="det">Directo · JetSMART</span></span>
@@ -813,7 +830,7 @@ align-items:center;justify-content:center;flex:none}
         <p class="marca-nombre">El <span>Datazo</span></p>
         <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
         precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
-        <p>Actualizado el 11/11/2026 a las 05:31 (hora argentina).</p>
+        <p>Actualizado el 11/11/2026 a las 06:30 (hora argentina).</p>
       </div>
       <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/ofertas/">Ofertas</a><a href="/productos/">Productos</a><a href="/viajes/vuelos/">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/">Mercado Libre</a><a href="/servicios/">Servicios</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
       <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>

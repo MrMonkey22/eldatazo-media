@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pasajes de Córdoba a Santiago de Chile · El Datazo</title>
+  <meta name="description" content="Pasajes de Córdoba a Santiago de Chile.">
+  <meta name="theme-color" content="#16233f">
+  <link rel="icon" href="/logo.png">
+  <meta name="robots" content="noindex">
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "c2648c131b9044528376ec48076fb21b"}'></script>
+  <script data-cmp-ab="2">
+  (function () {
+      var script = document.createElement("script");
+      script.async = 1;
+      script.setAttribute("data-cmp-ab","2");
+      script.src = 'https://tpembars.com/NTk3MTI0.js?t=597124';
+      document.head.appendChild(script);
+  })();
+  </script>
+  <link rel="preload" href="/fuentes/Poppins-Bold.ttf" as="font" type="font/ttf" crossorigin>
+  <style>
+@font-face{font-family:Poppins;src:url('/fuentes/Poppins-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:Poppins;src:url('/fuentes/Poppins-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@view-transition{navigation:auto}
+:root{--tinta:#16233f;--tinta-2:#24365e;--sol:#ffd21f;--sol-2:#f2c200;--papel:#f3f5f8;--blanco:#fff;--texto:#1c2433;
+--gris:#5b6577;--linea:#e1e5eb;--verde:#00a650;--verde-claro:#e5f6ec;--radio:18px;--sombra:0 1px 2px rgba(22,35,63,.06),
+0 8px 24px rgba(22,35,63,.07)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--texto);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,
+"Helvetica Neue",Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:Poppins,system-ui,sans-serif;color:var(--tinta);line-height:1.15;margin:0}
+.oculto{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--sol);outline-offset:2px;border-radius:6px}
+.envoltura{max-width:1440px;margin:0 auto;padding:0 clamp(20px,3vw,40px)}   /* 10-nov (José): más ancho, que no quede encajonado */
+.saltar{position:absolute;left:-999px;top:8px;background:var(--sol);color:var(--tinta);padding:8px 14px;border-radius:10px;
+font-weight:700;z-index:20}
+.saltar:focus{left:12px}
+
+/* cabecera */
+.cabecera{background:var(--tinta);color:var(--blanco);position:sticky;top:0;z-index:10;view-transition-name:cabecera}
+.cabecera-fila{display:flex;align-items:center;gap:18px;min-height:64px}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--blanco);flex:none}
+.marca svg{width:40px;height:30px}
+.marca-nombre{font:700 1.3rem Poppins,system-ui,sans-serif;margin:0;color:var(--blanco)}
+.marca-nombre span{color:var(--sol)}
+.menu{display:flex;gap:4px;flex:1;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{color:#d5dbe6;text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 12px;border-radius:10px;white-space:nowrap}
+.menu a:hover{color:var(--blanco);background:var(--tinta-2)}
+.menu a[aria-current="page"]{color:var(--tinta);background:var(--sol)}
+.cabecera .canal{flex:none}
+@media (max-width:820px){.cabecera-fila{flex-wrap:wrap;gap:6px 12px;padding:8px 0}.menu{order:3;flex-basis:100%;margin:0}
+.cabecera .canal span{display:none}}
+
+/* botones */
+.boton{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:700 1rem Poppins,system-ui,sans-serif;
+text-decoration:none;border:0;border-radius:12px;padding:12px 20px;cursor:pointer;background:var(--sol);color:var(--tinta);
+transition:background .15s,transform .15s}
+.boton:hover{background:var(--sol-2)}
+.boton:active{transform:translateY(1px)}
+.boton.oscuro{background:var(--tinta);color:var(--blanco)}
+.boton.oscuro:hover{background:var(--tinta-2)}
+.boton.borde{background:transparent;color:var(--tinta);box-shadow:inset 0 0 0 2px var(--tinta)}
+.boton.suave{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 1px var(--linea)}
+.icono{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;flex:none;border-radius:12px;
+color:var(--tinta);background:var(--blanco);box-shadow:inset 0 0 0 1px var(--linea);text-decoration:none}
+.icono:hover{box-shadow:inset 0 0 0 2px var(--tinta)}
+
+/* portada del inicio */
+.portada{background:var(--tinta);color:var(--blanco);padding:44px 0 72px;overflow:hidden}
+.portada-fila{display:grid;grid-template-columns:minmax(0,1fr);gap:36px;align-items:center}
+@media (min-width:900px){.portada-fila{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px}}
+.portada h1{color:var(--blanco);font-size:clamp(2.1rem,5.4vw,3.6rem);letter-spacing:-.02em;max-width:13em}
+.bajada{color:#c9d0dc;font-size:1.1rem;max-width:34em;margin:16px 0 26px}
+.bajada a{color:var(--sol);font-weight:700}
+.confianza{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 22px;color:#dfe4ec;font-size:.95rem}
+.confianza li{display:flex;align-items:center;gap:8px}
+.confianza svg{color:var(--sol);flex:none}
+
+/* buscador */
+.busca{display:flex;gap:10px;max-width:600px;margin:0}
+.busca input{flex:1;min-width:0;font:inherit;font-size:1.05rem;color:var(--texto);background:var(--blanco);border:0;
+border-radius:14px;padding:0 18px;min-height:56px}
+.busca input:focus{outline:none;box-shadow:0 0 0 3px rgba(255,210,31,.7)}
+.busca button{flex:none;min-height:56px;padding:0 24px;font:700 1.05rem Poppins,system-ui,sans-serif;background:var(--sol);
+color:var(--tinta);border:0;border-radius:14px;cursor:pointer}
+.busca button:hover{background:var(--sol-2)}
+.busca.claro input{box-shadow:inset 0 0 0 1px var(--linea)}
+
+/* la etiqueta de góndola (precio) */
+.gondola{position:relative;display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;background:var(--sol);
+color:var(--tinta);padding:8px 14px 8px 18px;border-radius:6px 12px 12px 6px;margin:0;
+clip-path:polygon(8px 0,100% 0,100% 100%,8px 100%,0 50%)}
+.gondola .precio{font:700 1.55rem/1.05 Poppins,system-ui,sans-serif;letter-spacing:-.01em}
+.gondola s{font-size:.92rem;color:#5a4a00}
+.gondola .baja{font:700 .9rem Poppins,system-ui,sans-serif;background:var(--tinta);color:var(--sol);padding:2px 8px;
+border-radius:999px}
+.gondola.grande .precio{font-size:2.3rem}
+.revision{display:block;font-size:.8rem;color:var(--gris);margin:6px 0 0}
+.antes-linea{margin:-2px 0 0;font-size:.82rem;color:var(--gris)}
+.antes-linea s{color:var(--gris)}
+
+/* tarjeta del datazo de hoy */
+.destacada-hoy{background:var(--blanco);color:var(--texto);border-radius:24px;padding:22px;box-shadow:0 18px 50px rgba(0,0,0,.28);
+position:relative}
+.destacada-hoy .cinta-hoy{position:absolute;top:-14px;left:22px;background:var(--sol);color:var(--tinta);
+font:700 .9rem Poppins,system-ui,sans-serif;padding:6px 14px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.destacada-foto{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;margin:8px 0 10px}
+.destacada-foto img{width:100%;height:100%;object-fit:contain}
+.destacada-hoy h2{font-size:1.15rem;line-height:1.3;margin:8px 0 12px}
+.destacada-hoy .acciones{margin-top:16px}
+.destacada-hoy .gondola{transform-origin:12px 50%}
+@media (prefers-reduced-motion:no-preference){
+.destacada-hoy .gondola{animation:balanceo 1.4s cubic-bezier(.2,.9,.3,1.25) .35s both}
+@keyframes balanceo{0%{transform:rotate(-14deg) translateY(-6px);opacity:0}35%{opacity:1}55%{transform:rotate(5deg)}
+75%{transform:rotate(-2deg)}100%{transform:none}}}
+
+/* secciones */
+.seccion{padding:44px 0 8px}
+.envoltura.seccion{padding-left:20px;padding-right:20px}
+.seccion-cabeza{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.seccion-titulo{font-size:clamp(1.5rem,3.2vw,2rem);letter-spacing:-.01em}
+.seccion-sub{margin:6px 0 0;color:var(--gris)}
+.ver-todo{font-weight:700;color:var(--tinta);text-decoration-thickness:2px;text-underline-offset:4px}
+
+/* dónde buscar (tiendas y secciones) */
+.lugares{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:-40px;position:relative}
+.lugar{display:flex;flex-direction:column;gap:6px;background:var(--blanco);border-radius:var(--radio);padding:20px;
+text-decoration:none;box-shadow:var(--sombra);border:1px solid var(--linea);transition:border-color .15s,box-shadow .15s}
+.lugar:hover{border-color:var(--tinta);box-shadow:0 10px 30px rgba(22,35,63,.12)}
+.lugar b{font:700 1.15rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.lugar span{color:var(--gris);font-size:.95rem}
+.lugar .cuenta{align-self:flex-start;font:700 .85rem Poppins,system-ui,sans-serif;padding:3px 10px;border-radius:999px;
+background:var(--papel);color:var(--tinta)}
+.lugar.ml .cuenta{background:var(--sol)}
+.lugar.baja .cuenta{background:var(--verde-claro);color:#006b34}
+@media (max-width:600px){.lugares{grid-template-columns:1fr 1fr;gap:10px}.lugar{padding:14px}
+.lugar b{font-size:1rem}.lugar span:not(.cuenta){display:none}.lugar .cuenta{font-size:.78rem}}
+.lugar.pronto{background:var(--papel);box-shadow:none;border:2px dashed #c3cad5}
+.lugar.pronto .cuenta{background:var(--blanco)}
+
+/* tiendas y servicios (ED-28) */
+.tiendas-lista,.servicios-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:0;
+padding:0;list-style:none}
+.tienda-fila,.servicio{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:22px;
+display:flex;flex-direction:column;gap:8px}
+.tienda-fila h2{font-size:1.3rem}
+.tienda-fila p,.servicio p{margin:0;color:#3a4456}
+.tienda-fila .boton,.servicio .boton{align-self:flex-start;margin-top:auto}
+.servicio h3{font-size:1.15rem}
+.servicio-ico{display:inline-flex;width:44px;height:44px;border-radius:12px;background:var(--papel);color:var(--tinta);
+align-items:center;justify-content:center}
+.servicio-ico svg{width:24px;height:24px}
+.pasos{margin:4px 0 6px;padding-left:20px;color:#3a4456;font-size:.94rem}
+.pasos li{margin:3px 0}
+.estado-pronto{align-self:flex-start;margin-top:auto;font:700 .85rem Poppins,system-ui,sans-serif;padding:5px 12px;
+border-radius:999px;background:var(--papel);color:var(--gris);border:1px dashed #c3cad5}
+.pronto-chico{display:inline-flex;align-items:center;gap:6px;font-size:.88rem;color:var(--gris);text-decoration:none;
+padding:10px 12px;border-radius:12px;border:1px dashed #c3cad5}
+.pronto-chico:hover{color:var(--tinta);border-color:var(--tinta)}
+
+/* tienda de cada producto */
+.tienda{display:flex;align-items:center;gap:7px;margin:0;font-size:.82rem;font-weight:600;color:var(--gris)}
+.tienda i{width:10px;height:10px;border-radius:50%;background:var(--gris);flex:none}
+.tienda.ml i{background:var(--sol);box-shadow:0 0 0 2px #e8bd00 inset}
+.tienda.shopee i{background:#ee4d2d}.tienda.decat i{background:#0f9d8a}.tienda.gadget i{background:#6c4ad8}
+.tienda.viajes i{background:#1d9e75}
+.estado-linea{margin-left:6px;font:700 .78rem Poppins,system-ui,sans-serif;background:var(--verde-claro);color:#006b34;
+padding:3px 10px;border-radius:999px}
+
+/* tarjetas */
+.grilla{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
+@media (min-width:700px){.grilla{grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}}
+.tarjeta{background:var(--blanco);border-radius:var(--radio);border:1px solid var(--linea);display:flex;flex-direction:column;
+overflow:hidden;transition:box-shadow .2s,border-color .2s}
+.tarjeta:hover{box-shadow:0 12px 32px rgba(22,35,63,.12);border-color:#c9d1dc}
+.tarjeta[data-oculto]{display:none}
+.tarjeta-foto{position:relative;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;background:var(--blanco);
+padding:12px}
+.tarjeta-foto img{width:100%;height:100%;object-fit:contain}
+.estado{position:absolute;top:10px;left:10px;font:700 .78rem Poppins,system-ui,sans-serif;background:var(--verde-claro);
+color:#006b34;padding:4px 10px;border-radius:999px}
+.estado.nueva{background:var(--papel);color:var(--tinta)}
+.cuerpo{padding:4px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cuerpo h3{font-size:.98rem;line-height:1.3;font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+overflow:hidden;min-height:2.6em}
+.tarjeta .gondola{align-self:flex-start}
+.tarjeta .gondola .precio{font-size:1.3rem}
+.hechos{display:flex;flex-wrap:wrap;gap:4px 12px;margin:0;padding:0;list-style:none;font-size:.82rem;color:var(--gris)}
+.dato-precio{margin:0;font-size:.85rem;font-weight:600;color:#006b34}
+.nota{margin:0;font-size:.8rem;color:var(--gris)}
+.acciones{display:flex;gap:8px;margin-top:auto;padding-top:6px}
+.acciones .boton{flex:1;padding:12px 10px;font-size:.92rem;white-space:nowrap}
+.boton .corto{display:none}
+@media (max-width:480px){.cuerpo{padding:2px 12px 12px}.grilla .acciones .compartir{display:none}
+.grilla .acciones .boton{padding:11px 6px}.grilla .boton .largo{display:none}.grilla .boton .corto{display:inline}
+.tarjeta .gondola{padding:6px 10px 6px 16px}.tarjeta .gondola .precio{font-size:1.12rem}}
+.tarjeta.terminada .tarjeta-foto img{filter:grayscale(1);opacity:.6}
+.vacio{background:var(--blanco);border:1px dashed var(--linea);border-radius:var(--radio);padding:22px;color:var(--gris)}
+
+/* barra de filtros */
+.barra{display:flex;flex-direction:column;gap:12px;margin-bottom:18px}
+.barra-fila{display:flex;gap:10px;flex-wrap:wrap}
+.barra .buscar{flex:1 1 220px}
+.barra input,.barra select{width:100%;font:inherit;color:var(--texto);background:var(--blanco);border:1px solid var(--linea);
+border-radius:12px;padding:11px 14px;min-height:46px}
+.barra .orden{flex:0 1 220px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.chips button{flex:none;font:600 .92rem system-ui,sans-serif;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);
+border-radius:999px;padding:8px 14px;cursor:pointer}
+.chips button span{color:var(--gris);font-weight:500}
+.chips button[aria-pressed="true"]{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}
+.chips button[aria-pressed="true"] span{color:#c9d0dc}
+.contador{margin:0;color:var(--gris);font-size:.9rem}
+
+/* pestañas de la página de Mercado Libre */
+.cabeza-tienda{background:var(--tinta);color:var(--blanco);padding:34px 0 30px}
+.cabeza-tienda h1{color:var(--blanco);font-size:clamp(1.9rem,4.4vw,2.8rem)}
+.cabeza-tienda p{color:#c9d0dc;margin:8px 0 0}
+.cabeza-tienda .tienda{color:#dfe4ec;font-size:.95rem;margin-bottom:10px}
+.saltos{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.saltos a{color:var(--blanco);text-decoration:none;font-weight:600;padding:8px 14px;border-radius:999px;
+box-shadow:inset 0 0 0 1px rgba(255,255,255,.28)}
+.saltos a:hover{background:var(--tinta-2)}
+
+/* bajaron de precio */
+.franja-bajo{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:18px 18px 10px}
+.franja-cabeza{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.franja-cabeza h2{font-size:1.25rem}
+.franja-cabeza .cuenta{font:700 .85rem Poppins,system-ui,sans-serif;background:var(--verde-claro);color:#006b34;
+padding:2px 10px;border-radius:999px}
+.franja-lista{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:12px;overflow-x:auto;margin:0;
+padding:0 0 10px;list-style:none;scroll-snap-type:x mandatory}
+.franja-lista li{scroll-snap-align:start}
+.franja-lista a{display:flex;gap:12px;align-items:center;text-decoration:none;padding:8px;border-radius:12px}
+.franja-lista a:hover{background:var(--papel)}
+.franja-lista img,.franja-lista .sin-foto{width:64px;height:64px;object-fit:contain;flex:none;border-radius:10px;background:var(--blanco);
+border:1px solid var(--linea)}
+.franja-lista b{display:block;font-size:.88rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;
+-webkit-box-orient:vertical;overflow:hidden}
+.franja-lista .ahora{display:block;font:700 1rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.franja-lista .bajo{font-size:.82rem;font-weight:700;color:#006b34}
+
+/* lo más vendido */
+.banda-vendidos{background:var(--tinta);color:var(--blanco);padding:44px 0;margin-top:44px}
+.banda-vendidos h2{color:var(--blanco);font-size:clamp(1.5rem,3.2vw,2rem)}
+.banda-sub{color:#c9d0dc;margin:6px 0 18px;max-width:46em}
+.pestanas{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:16px}
+.pestanas button{flex:none;font:600 .92rem system-ui,sans-serif;color:var(--blanco);background:transparent;border:0;
+box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);border-radius:999px;padding:8px 14px;cursor:pointer}
+.pestanas button[aria-selected="true"]{background:var(--sol);color:var(--tinta);box-shadow:none}
+.carrusel{position:relative}
+.estante{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(170px,210px);gap:14px;overflow-x:auto;margin:0;padding:0 0 8px;
+list-style:none;scroll-snap-type:x mandatory;scrollbar-width:none}
+.estante::-webkit-scrollbar{display:none}
+.mini{scroll-snap-align:start}
+.mini a{position:relative;display:flex;flex-direction:column;gap:4px;height:100%;background:var(--blanco);color:var(--texto);
+text-decoration:none;border-radius:16px;padding:12px}
+.puesto{position:absolute;top:8px;left:8px;font:700 .85rem Poppins,system-ui,sans-serif;background:var(--tinta);color:var(--sol);
+padding:2px 8px;border-radius:999px}
+.mini-foto{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.mini-foto img{width:100%;height:100%;object-fit:contain}
+.mini-titulo{font-size:.85rem;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mini-precio{font:700 1.1rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.mini-bajo{font-size:.78rem;font-weight:700;color:#006b34}
+.mini-dato{font-size:.78rem;color:var(--gris)}
+.flecha{position:absolute;top:40%;z-index:2;width:42px;height:42px;border-radius:50%;border:0;background:var(--sol);color:var(--tinta);
+font:700 1.4rem/1 system-ui;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.flecha.izq{left:-10px}.flecha.der{right:-10px}
+.flecha:disabled{opacity:0;pointer-events:none}
+@media (hover:none){.flecha{display:none}}
+
+/* cómo elegimos */
+.criterio{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin:0;padding:0;list-style:none}
+.criterio li{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:20px}
+.criterio .dato{display:block;font:700 1.5rem Poppins,system-ui,sans-serif;color:var(--tinta);margin-bottom:6px}
+.criterio b{display:block;color:var(--tinta);margin-bottom:4px}
+.criterio span:not(.dato){color:var(--gris);font-size:.94rem}
+.texto-largo{max-width:46em}
+.texto-largo h2{font-size:1.35rem;margin:34px 0 10px}
+.texto-largo p{color:#3a4456;margin:0 0 12px}
+
+/* canal */
+.aviso-telegram{padding:44px 0}
+.aviso-fila{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;background:var(--sol);
+border-radius:24px;padding:26px 28px}
+.aviso-fila h2{font-size:1.4rem}
+.aviso-fila p{margin:6px 0 0;color:#3d3300}
+
+/* viajes */
+.pronto-caja{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:28px;max-width:46em}
+.pronto-caja ul{margin:12px 0 0;padding-left:20px;color:#3a4456}
+.pronto-caja h2:first-child{margin-top:0}
+.rubros-nav{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:thin}
+.rubros-nav a{flex:none;font:600 .92rem system-ui,sans-serif;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);
+border-radius:999px;padding:8px 14px;text-decoration:none}
+.rubros-nav a[aria-current="page"]{background:var(--tinta);color:var(--blanco);border-color:var(--tinta)}
+.rubros-nav a.pronto{color:var(--gris)}
+.migas{font-size:.9rem;color:#c9d0dc;margin:0 0 8px}.migas a{color:#dfe4ec}
+.rubros-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin:0;padding:0;list-style:none}
+.rubro{display:flex;flex-direction:column;gap:8px;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);
+padding:22px;color:inherit;text-decoration:none}
+a.rubro:hover{border-color:var(--tinta)}
+.rubro h2{font-size:1.2rem}.rubro p{margin:0;color:#3a4456}
+.rubro .cuenta{margin-top:auto;font:700 .9rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.rubro.pronto{background:transparent;border-style:dashed}.rubro.pronto .cuenta{color:var(--gris)}
+.consejos{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:20px 22px;margin:0 0 22px}
+.consejos h2{font-size:1.1rem;margin:0 0 8px}.consejos ul{margin:0;padding-left:20px;color:#3a4456}
+.consejos li+li{margin-top:6px}
+.marcas-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));margin:0;padding:0;list-style:none}
+.marca-viaje{display:flex;flex-direction:column;gap:10px;background:var(--blanco);border:1px solid var(--linea);
+border-radius:var(--radio);padding:22px}
+.marca-viaje h3{font-size:1.2rem}.marca-viaje p{margin:0;color:#3a4456}
+.marca-viaje .boton{align-self:flex-start;margin-top:auto}
+.buscador-vuelos{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:20px 22px;margin:0 0 26px}
+.buscador-vuelos h2{font-size:1.35rem;margin:0 0 4px}.buscador-vuelos .nota{margin:0 0 12px}
+#tpwl-search{min-height:64px}
+.pasajes{margin:0 0 26px}.pasajes>h2{font-size:1.35rem;margin:0 0 6px}
+.pasajes .nota{margin:0 0 14px}
+.origenes{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 12px}
+.origenes a{font:600 .9rem system-ui,sans-serif;color:var(--tinta);background:var(--blanco);border:1px solid var(--linea);
+border-radius:999px;padding:6px 12px;text-decoration:none}
+.desde-titulo{font-size:1.1rem;margin:18px 0 10px;scroll-margin-top:90px}
+.rutas{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));margin:0;padding:0;list-style:none}
+.ruta{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:18px 18px 12px}
+.g-lista{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin:0 0 26px;padding:0;list-style:none}
+.g-tarjeta{display:flex;flex-direction:column;gap:6px;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:14px}
+.g-tarjeta img{width:100%;height:auto;border-radius:12px;aspect-ratio:1}
+.g-tarjeta h3{font-size:1rem;line-height:1.3;margin:0}.g-tarjeta .tienda{margin:4px 0 0}
+.g-precio{margin:2px 0 0;font:700 1.25rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.g-precio span{font:400 .8rem system-ui,sans-serif;color:var(--gris)}
+.g-bajo{margin:0;color:var(--verde);font-weight:600;font-size:.9rem}.g-codigo{margin:0;font-size:.9rem;color:#3a4456}
+.g-tarjeta .boton{margin-top:auto;align-self:stretch;text-align:center}.g-revisado{margin:0;font-size:.78rem;color:var(--gris)}
+.res-grupo{grid-column:1/-1;margin:14px 0 0;font:700 1.2rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.chips-rubros{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chips-rubros a{padding:7px 14px;border-radius:999px;
+border:1px solid rgba(255,255,255,.35);color:#fff;text-decoration:none;font:600 .9rem system-ui,sans-serif}
+.chips-rubros a:hover{background:rgba(255,255,255,.12)}
+.rubro-foto img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:12px;margin-bottom:10px}
+.pasos-codigo{margin:14px 0 0;padding-left:22px;color:#dfe4ec;max-width:46em}.pasos-codigo li+li{margin-top:4px}
+.pasos-codigo b{color:var(--sol)}
+.g-cat{font-size:1.25rem;margin:8px 0 12px;scroll-margin-top:90px}
+.ver-guia{display:inline-block;margin-top:8px;font:600 .88rem system-ui,sans-serif;color:var(--tinta)}
+.guias-viaje{margin:0 0 26px}.guias-viaje>h2{font-size:1.35rem;margin:0 0 10px}
+.guia{max-width:52em}.guia>section{margin:0 0 26px}.guia h2{font-size:1.3rem;margin:0 0 8px}
+.guia p,.guia li{color:#3a4456}.guia ul{margin:0;padding-left:20px}.guia li+li{margin-top:6px}
+.hacer-lista{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));margin:0;padding:0;list-style:none}
+.guia .hacer-lista{padding:0}.hacer-lista li{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);
+padding:16px 18px;margin:0}.hacer-lista h3{font-size:1.05rem;margin:0 0 4px}.hacer-lista p{margin:0}
+.para-viaje{display:grid;gap:10px;margin:0;padding:0;list-style:none}.guia .para-viaje{padding:0}
+.para-viaje a{display:block;background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);padding:14px 18px;
+color:inherit;text-decoration:none}.para-viaje a:hover{border-color:var(--tinta)}.para-viaje b{color:var(--tinta)}
+.fuentes{font-size:.88rem}.fuentes ol{margin:6px 0 0;padding-left:20px}.fuentes a{color:var(--gris)}
+.ruta h3{font-size:1.15rem;margin:0}.ruta .desde{margin:2px 0 10px;color:var(--gris);font-size:.92rem}
+.ruta .desde b{font:700 1.25rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.vuelos-lista{margin:0;padding:0;list-style:none}
+.vuelos-lista li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 0;border-top:1px solid var(--linea)}
+.vuelos-lista .fechas{display:block;font-weight:600;color:var(--tinta)}
+.vuelos-lista .det{display:block;font-size:.84rem;color:var(--gris)}
+.vuelos-lista a{flex:none;font:700 .95rem Poppins,system-ui,sans-serif;color:var(--tinta);background:var(--sol);border-radius:10px;
+padding:8px 12px;text-decoration:none;white-space:nowrap}
+.vuelos-lista a:hover{background:var(--sol-2)}
+
+/* resultados */
+.resultados{padding:32px 0 4px}
+.res-grilla{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px;margin:10px 0;padding:0;list-style:none}
+@media (min-width:760px){.res-grilla{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}}
+.res{background:var(--blanco);border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column}
+.res.top{border:2px solid var(--tinta)}
+.res-foto{aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:12px}
+.res-foto img{width:100%;height:100%;object-fit:contain}
+.res-cuerpo{padding:4px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.res-cuerpo h3{font-size:.92rem;font-weight:600;line-height:1.3;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;
+overflow:hidden}
+.res-dato{font-size:.8rem;color:var(--gris)}
+.res .boton{margin-top:auto;padding:11px 12px;font-size:.92rem}
+.res-sello{align-self:flex-start;font:700 .74rem Poppins,system-ui,sans-serif;background:var(--tinta);color:var(--sol);
+padding:3px 10px;border-radius:999px}
+.limpiar{border:0;background:none;color:var(--gris);font:inherit;font-size:.9rem;text-decoration:underline;cursor:pointer}
+
+/* terminadas */
+.terminadas{margin:40px 0 0}
+.terminadas summary{cursor:pointer;font:700 1rem Poppins,system-ui,sans-serif;color:var(--tinta);padding:14px 0}
+.terminadas .grilla{margin-top:8px}
+
+/* pie */
+footer{background:var(--tinta);color:#c9d0dc;margin-top:56px;padding:40px 0 30px;font-size:.92rem}
+.pie{display:grid;gap:24px}
+@media (min-width:820px){.pie{grid-template-columns:2fr 1fr 1fr}}
+.pie p{margin:0 0 10px}
+.pie a{color:var(--blanco)}
+.pie-enlaces{display:flex;flex-direction:column;gap:8px}
+.pie-enlaces b{color:var(--blanco);font-family:Poppins,system-ui,sans-serif}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}@view-transition{navigation:none}
+*{transition:none!important;animation:none!important}}
+
+.migas{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px;padding:0;list-style:none;font-size:.88rem;color:#c9d0dc}
+.migas a{color:var(--blanco)}
+.migas li+li::before{content:"/";margin-right:6px;color:#8a95a8}
+.ficha{display:grid;gap:28px;padding:32px 0 8px}
+@media (min-width:860px){.ficha{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start}}
+.ficha-foto{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;aspect-ratio:1/1;padding:28px;
+display:flex;align-items:center;justify-content:center}
+.ficha-foto img{width:100%;height:100%;object-fit:contain}
+.ficha-foto.terminada img{filter:grayscale(1);opacity:.6}
+.ficha h1{font-size:clamp(1.4rem,3vw,2rem);margin:8px 0 16px}
+.ficha .gondola .precio{font-size:2.2rem}
+.ficha .acciones{margin-top:18px;max-width:560px;flex-wrap:wrap}
+.ficha .acciones .boton.borde{flex:0 1 auto}
+.ficha .acciones .boton{font-size:1rem;padding:14px 18px}
+.datos{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.datos li{background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px}
+.datos b{display:block;font:700 1.05rem Poppins,system-ui,sans-serif;color:var(--tinta)}
+.datos span{font-size:.84rem;color:var(--gris)}
+.terminada-aviso{background:#fff4d1;border-radius:14px;padding:12px 16px;margin:0 0 14px;color:#5a4a00;font-weight:600}
+.historial{background:var(--blanco);border:1px solid var(--linea);border-radius:24px;padding:22px;margin-top:28px;position:relative}
+.historial h2{font-size:1.25rem}
+.historial p{color:var(--gris);margin:6px 0 0}
+.grafico-caja{display:grid;grid-template-columns:72px minmax(0,1fr);gap:6px;margin-top:16px}
+.eje-y{position:relative}
+.eje-y span{position:absolute;right:0;transform:translateY(-50%);font-size:.8rem;color:var(--gris);white-space:nowrap}
+.eje-x{display:flex;justify-content:space-between;margin:4px 0 0 78px;font-size:.8rem;color:var(--gris)}
+.grafico{width:100%;height:auto;display:block;touch-action:pan-y;overflow:visible}
+.grafico .rejilla{stroke:#e8ebf0;stroke-width:1;vector-effect:non-scaling-stroke}
+.grafico .linea{fill:none;stroke:var(--tinta);stroke-width:2;stroke-linejoin:round;stroke-linecap:round;
+vector-effect:non-scaling-stroke}
+.grafico .punto{fill:var(--tinta);stroke:var(--blanco);stroke-width:2}
+.grafico .hoy{fill:var(--sol);stroke:var(--tinta);stroke-width:2}
+.grafico .guia{stroke:#9aa4b5;stroke-width:1;stroke-dasharray:3 3}
+.tip{position:absolute;pointer-events:none;background:var(--tinta);color:var(--blanco);font-size:.85rem;padding:6px 10px;
+border-radius:8px;white-space:nowrap;transform:translate(-50%,-120%)}
+.historial details{margin-top:12px}
+.historial summary{cursor:pointer;color:var(--tinta);font-weight:600;font-size:.92rem}
+.historial table{border-collapse:collapse;margin-top:8px;font-size:.9rem}
+.historial td,.historial th{padding:4px 14px 4px 0;text-align:left}
+.historial td+td{font-variant-numeric:tabular-nums}
+.tarjeta h3 a{text-decoration:none}
+.tarjeta h3 a:hover{text-decoration:underline}
+
+.mini-cancion{display:inline-flex;align-items:center;gap:9px;flex:none;text-decoration:none;color:var(--blanco);
+padding:5px 14px 5px 5px;border-radius:999px;background:var(--tinta-2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);
+cursor:pointer;transition:background .15s}
+.mini-cancion:hover{background:#2e4372}
+.mc-boton{width:34px;height:34px;border-radius:50%;background:var(--sol);color:var(--tinta);display:inline-flex;
+align-items:center;justify-content:center;flex:none}
+.mc-boton svg{width:18px;height:18px}
+.mini-cancion .i-pausa,.mini-cancion.sonando .i-play{display:none}
+.mini-cancion.sonando .i-pausa{display:block}
+.mc-texto{display:flex;flex-direction:column;line-height:1.1}
+.mc-texto b{font:700 .85rem Poppins,system-ui,sans-serif}
+.mc-texto small{font-size:.68rem;color:#aeb8ca}
+.mc-ondas{display:none;align-items:flex-end;gap:2px;height:16px}
+.mc-ondas i{width:3px;height:30%;background:var(--sol);border-radius:2px;animation:mc-onda .9s ease-in-out infinite}
+.mc-ondas i:nth-child(2){animation-delay:-.3s}.mc-ondas i:nth-child(3){animation-delay:-.6s}.mc-ondas i:nth-child(4){animation-delay:-.15s}
+.mini-cancion.sonando .mc-ondas{display:inline-flex}
+@keyframes mc-onda{0%,100%{height:25%}50%{height:100%}}
+@media (prefers-reduced-motion:reduce){.mc-ondas i{animation:none;height:70%}}
+@media (max-width:1180px){.mini-cancion{padding:4px}.mc-texto{display:none}.mini-cancion.sonando{padding-right:10px}}
+@media (max-width:820px){.mini-cancion{margin-left:auto}}
+
+.ruta > section{margin-top:26px}
+.ruta-acciones{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.tabla-ruta{overflow-x:auto}
+.tabla-ruta table{width:100%;border-collapse:collapse;background:var(--blanco);border-radius:var(--radio);overflow:hidden;box-shadow:var(--sombra)}
+.tabla-ruta th,.tabla-ruta td{padding:11px 12px;text-align:left;border-top:1px solid var(--linea);white-space:nowrap}
+.tabla-ruta thead th{background:var(--tinta);color:var(--blanco);border-top:0;font-size:.85rem}
+.tabla-ruta td a{font-weight:700;color:var(--tinta);background:var(--sol);border-radius:8px;padding:5px 10px;text-decoration:none}
+.chispa{color:var(--tinta);display:block;margin-top:8px;max-width:100%}
+.preguntas h3{font-size:1.02rem;margin:18px 0 4px}
+.preguntas p{margin:0}
+.otras-rutas{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.otras-rutas li{background:var(--blanco);border:1px solid var(--linea);border-radius:999px;padding:6px 12px;font-size:.9rem}
+.rutas h3 a{color:inherit;text-decoration:none}.rutas h3 a:hover{text-decoration:underline}
+.ruta-acciones .boton.oscuro{background:transparent;color:var(--blanco);box-shadow:inset 0 0 0 2px rgba(255,255,255,.45)}
+@media (max-width:600px){.tabla-ruta th:nth-child(3),.tabla-ruta td:nth-child(3),.tabla-ruta th:nth-child(4),.tabla-ruta td:nth-child(4){display:none}
+.tabla-ruta th,.tabla-ruta td{padding:11px 10px}}
+</style>
+</head>
+<body>
+  <a class="saltar" href="#contenido">Ir al contenido</a>
+  <header class="cabecera">
+    <div class="envoltura cabecera-fila">
+      <a class="marca" href="/" aria-label="El Datazo, inicio"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M3 9.5 L27 2.5 L38 11 L33 24 L9 28.5 Z" fill="#ffd21f" stroke="#ffd21f" stroke-width="2" stroke-linejoin="round"/><circle cx="11" cy="16" r="2.6" fill="#16233f"/><path d="M24 6.5 L18.5 16.5 L23 16 L20.5 24 L27 13 L22.5 13.5 Z" fill="#16233f"/></svg><span class="marca-nombre">El <span>Datazo</span></span></a>
+      <nav class="menu" aria-label="Secciones"><a href="/ofertas/">Ofertas</a><a href="/productos/">Productos</a><a href="/viajes/vuelos/" aria-current="page">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a></nav><a class="mini-cancion" href="/musica/a-la-playa-a-sonreir.mp3" data-cancion title="A la playa a sonreír · Música hecha con IA" aria-label="Escuchar nuestra canción, «A la playa a sonreír» (música hecha con IA)" role="button" aria-pressed="false"><span class="mc-boton"><svg class="i-play" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg><svg class="i-pausa" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg></span><span class="mc-ondas" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="mc-texto"><b>Nuestra canción</b><small>Hecha con IA</small></span><audio preload="none" src="/musica/a-la-playa-a-sonreir.mp3"></audio></a><a class="boton canal" href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 4 3 11l5 2 2 6 3-4 5 4 3-15zM9 13l9-6-7 8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Canal de Telegram</span></a>
+    </div>
+  </header>
+  <main id="contenido">
+    <section class="cabeza-tienda"><div class="envoltura"><p class="migas"><a href="/viajes/">Viajes</a> › <a href="/viajes/vuelos/">Vuelos</a> › Córdoba → Santiago de Chile</p>
+      <h1>Pasajes de Córdoba a Santiago de Chile</h1>
+      <p>Ahora no tenemos pasajes vistos para esta ruta. Mirá las otras rutas o buscá con tus fechas en
+      <a href="/viajes/vuelos/">Vuelos</a>.</p></div></section>
+    <section class="seccion envoltura ruta"><section aria-labelledby="otras-titulo"><h2 id="otras-titulo">Otras rutas</h2><ul class="otras-rutas" role="list"><li><a href="/viajes/vuelos/buenos-aires-santiago-de-chile/">Buenos Aires → Santiago de Chile</a> · desde $202.382</li><li><a href="/viajes/vuelos/mendoza-santiago-de-chile/">Mendoza → Santiago de Chile</a> · desde $120.555</li><li><a href="/viajes/vuelos/cordoba-iguazu/">Córdoba → Iguazú</a> · desde $230.301</li><li><a href="/viajes/vuelos/cordoba-rio-de-janeiro/">Córdoba → Río de Janeiro</a> · desde $630.278</li><li><a href="/viajes/vuelos/cordoba-cancun/">Córdoba → Cancún</a> · desde $1.284.325</li><li><a href="/viajes/vuelos/cordoba-barcelona/">Córdoba → Barcelona</a> · desde $2.095.530</li></ul></section></section>
+  </main>
+  <footer>
+    <div class="envoltura pie">
+      <div>
+        <p class="marca-nombre">El <span>Datazo</span></p>
+        <p>Los links son de afiliado: si comprás, El Datazo puede recibir una comisión, sin que cambie tu precio. Los
+        precios son los publicados por cada tienda en el momento indicado y pueden cambiar.</p>
+        <p>Actualizado el 11/11/2026 a las 06:30 (hora argentina).</p>
+      </div>
+      <nav class="pie-enlaces" aria-label="Páginas"><b>El Datazo</b><a href="/">Inicio</a><a href="/ofertas/">Ofertas</a><a href="/productos/">Productos</a><a href="/viajes/vuelos/">Viajes</a><a href="/tiendas/">Tiendas</a><a href="/como-elegimos/">Cómo elegimos</a><a href="/mercado-libre/">Mercado Libre</a><a href="/servicios/">Servicios</a><a href="/mercado-libre/#terminadas">Ofertas terminadas</a><a href="/privacidad/">Privacidad</a></nav>
+      <div class="pie-enlaces"><b>Contacto</b><a href="mailto:contacto@eldatazo.com.ar">contacto@eldatazo.com.ar</a><a href="https://www.instagram.com/eldatazo.arg/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/profile.php?id=61595441168911" target="_blank" rel="noopener">Facebook</a><a href="https://t.me/eldatazo_ofertas" target="_blank" rel="noopener">Telegram</a></div>
+    </div>
+  </footer>
+<script>
+document.querySelectorAll('[data-cancion]').forEach(function (c) {
+  var a = c.querySelector('audio');
+  c.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    if (a.paused) { a.play(); } else { a.pause(); }
+  });
+  c.addEventListener('keydown', function (ev) { if (ev.key === ' ') { ev.preventDefault(); c.click(); } });
+  a.addEventListener('play', function () { c.classList.add('sonando'); c.setAttribute('aria-pressed', 'true'); });
+  a.addEventListener('pause', function () { c.classList.remove('sonando'); c.setAttribute('aria-pressed', 'false'); });
+  a.addEventListener('ended', function () { a.currentTime = 0; });
+});
+</script>
+</body>
+</html>
